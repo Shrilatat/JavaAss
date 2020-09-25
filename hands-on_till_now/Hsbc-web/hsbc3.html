@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		var f1 = ()=>
+			//alert(window.document.forms[0].Name.value);
+			alert(document.getElementById("name").value);
+	</script>
+	<form method="post" >
+	Username: <input type="text" name="Name" id="name">
+	<br><br>
+	Password: <input type="Password" name="Password">
+	<br><br>
+	<input type="submit" value="Register" onclick="f1()">
+	</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		var f1 = () => {
+			//document.getElementById("p2").innerText="<h1>This is the change</h1>"
+			var par = document.getElementsByTagName("p")
+			for (var i = 0; i < par.length; i++)
+				{par[i].innerHTML="Hi"}
+			}
+	</script>
+	<h1>first header</h1>
+	<p>1st para</p>
+	<p id="p2">2nd para</p>
+	<h4>4th header</h4>
+	<p>3rd para</p>
+	<p>4th para</p>
+	<input type="button" value="change para 2" onClick="f1()">
+</body>
+</html>
