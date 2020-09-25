@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Area and circumference</title>
+</head>
+<body>
+<script>
+	var display = () => {
+		var radius = parseInt(document.getElementById("radius").value)
+		document.getElementById("area").innerHTML = radius*radius*3.14;
+		document.getElementById("circumference").innerHTML = radius*2*3.14;
+
+}
+</script>
+
+	<form>
+		Enter Radius : <input type="text" name="radius" id="radius">
+		<br><br>
+		<input type="button" value="display" onClick="display()">
+		<br><br>
+		Area: <span id="area"></span><br><br>
+		Circumference: <span id = "circumference"></span>
+
+	</form>
+
+</body>
+</html>
