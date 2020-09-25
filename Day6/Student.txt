@@ -1,0 +1,2 @@
+Students data:
+com.hsbc.practise.StuOps@1d251891
