@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order Details</title>
+	<style>
+		input{
+
+		}
+		.warning{
+			color: #ff0000;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+		var validate = () => {
+			var id = document.getElementById("id").value
+			var name = document.getElementById("name").value
+			var total = document.getElementById("total").value
+			var billingDate = document.getElementById("billingDate").value
+			var shippingDate = document.getElementById("shippingDate").value
+
+			var info =`
+				Order id : ${id}<br>
+				Cust name : ${name}<br>
+				Billing date : ${billingDate}<br>
+				Shipping date : ${shippingDate}<br>
+				Order total : ${total}<br>
+			`
+			if (name.length>5 && billingDate<=shippingDate){
+				document.getElementById("warning-name").style.display="none";
+				document.getElementById("warning-bdate").style.display="none"
+				document.getElementById("information").innerHTML = info
+			}
+			
+			if (name.length <=5){
+				document.getElementById("warning-name").style.display="block";
+			}
+
+			if(billingDate>shippingDate){
+				document.getElementById("warning-bdate").style.display="block"
+			}
+
+		}	
+
+		function checkSubmit(){
+        	var f = document.forms[0].elements;
+        	var cansubmit = true;
+
+        	for (var i = 0; i < f.length; i++) {
+            	if (f[i].value.length == 0) cansubmit = false;
+        	}
+
+        	if (cansubmit) {
+            	document.getElementById('displaybutton').disabled = false;
+        	}
+    	}
+
+		
+	</script>
+	<form>
+		Order Id: <input type="number" id="id" onkeyup="checkSubmit()" required>
+		<br><br>
+		Cust name: <input type="text" id="name" onkeyup="checkSubmit()" required> <span class="warning" id="warning-name">Cust name cannot be < 6 characters</span>
+		<br><br>
+		Enter billing date: <input type="date" id="billingDate" onkeyup="checkSubmit()" required> <span class="warning" id="warning-bdate">Billing date cannot be more than shipping date</span>
+		<br><br>
+		Enter Shipping date: <input type="date" id="shippingDate" onkeyup="checkSubmit()" required>
+		<br><br>
+		Order total: <input type="number" id="total" onkeyup="checkSubmit()" required>
+		<br><br>
+		<input type="button" id="displaybutton" value="display" onclick="validate()" disabled="disabled">
+	</form>
+	<div id="information"></div>
+</body>
+</html>
