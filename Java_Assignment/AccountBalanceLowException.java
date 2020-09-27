@@ -1,7 +1,7 @@
 package com.hsbc.Account;
 /**
  * 
- * @author ADITI GUPTA
+ * @author Fareeya Khan
  * 
  * EXCEPTION CLASS TO THROW EXCEPTION WHEN BALANCE IS TOO LOW FOR WITHDRAWL
  */

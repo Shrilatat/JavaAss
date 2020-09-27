@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 /**
  * 
- * @author ADITI GUPTA
+ * @author Fareeya Khan
  * 
  * CLASS TO GET CONNECTION FOR DATABASE
  */

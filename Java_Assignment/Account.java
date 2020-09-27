@@ -3,7 +3,7 @@ package com.hsbc.Account;
 import java.util.Scanner;
 /**
  * 
- * @author ADITI GUPTA
+ * @author Fareeya Khan
  * 
  * BUSINESS CLASS TO INTERACT WITH DATA SOURCE
  */

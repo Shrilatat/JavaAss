@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 /**
  * 
- * @author ADITI GUPTA
+ * @author Fareeya Khan
  * 
  * DAO CLASS WHICH ACCESS THE DATABASE AND PERFORMS REQUIRED MODIFICATIONS IN IT!
  */
