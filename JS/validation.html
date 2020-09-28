@@ -1,0 +1,48 @@
+<html>
+<head>
+</head>
+
+<body>
+		<script type="text/javascript">
+			function validate()
+			{
+				var name = document.getElementById("t1").value;
+				if (name==null || name == ""){
+
+				alert("Username validation");
+				document.getElementById("t1").focus();
+				return false;
+			}
+
+			if(name.length < 5)
+			{
+				var name = document.getElementById("t1").value;
+				alert("Username must be > 5 ");
+				document.getElementById("t1").focus();
+				return false;
+			}
+			}
+
+
+		</script>
+
+
+	
+
+	
+	<form  onsubmit="return validate()">
+		name: <input type="text" id="t1"><br>
+		<input type="submit">
+		
+
+
+
+	</form>
+
+
+</body>
+
+
+
+
+</html>
