@@ -1,0 +1,57 @@
+<html>
+	<head>
+	</head>
+	
+	<body>
+	<script>
+		function f1()
+		{
+			var name = document.getElementById("t1").value;
+			//var name = window.document.forms[0].t1.value;
+			document.write("Hello "+name+"<br>");
+			//alert("button clicked");
+		}
+		
+		function add()
+		{
+			var num1 = parseInt(document.getElementById("n1").value);
+			var num2 = parseInt(document.getElementById("n2").value);
+			//document.getElementById("res").value = (num1+num2);
+			//document.write("Sum is "+(num1+num2)+"<br>");
+			document.getElementById("p1").innerHTML = num1+num2;
+		}
+		
+		function validate(){
+			var name = document.getElementById("n1").value;
+			if(name == null || name == "")
+			{
+				alert("Username is mandatory");
+				document.getElementById("n1").focus();
+				return false;
+			}
+			
+			if(name.length < 5)
+			{
+				alert("Username must be greater than 5 characters");
+				document.getElementById("n1").focus();
+				return false;
+			}
+		}
+	</script>
+	<form onsubmit = "return validate()">
+		 <!--Username: <input type = "text" name="t1" id="t1"><br><br>-->
+		 <!--Number 1: <input type = "number" name="n1" id="n1"><br><br>
+		 Number 2: <input type = "number" name="n2" id="n2"><br><br>
+		 <input type ="button" value= "Add" onclick = "add()"><br><br>-->
+		 <!--Result: <input type = "number" id="res"><br><br>-->
+		 
+		 <!--<p id = "p1"></p><br><br>-->
+		 <!--The sum is <span id="p1"></span>-->
+		 
+		<!--<input type ="button" value= "greet" onclick = "f1()">-->
+		Name: <input type = "text" id="n1"><br><br>
+		 <input type ="submit"><br><br>
+	</form>
+		
+	</body>
+</html>

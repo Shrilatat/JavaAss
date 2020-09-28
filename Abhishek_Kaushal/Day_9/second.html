@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>Welcome</title>
+		<script>
+			document.write("<h1>Hello World! in  head</h1>");
+		</script>
+	</head>
+
+	<body bgcolor="lightblue">
+		<h1>Welcome to <b>HTML!</b></h1>
+		<hr>
+		<script>
+			//document.write("<h1>Hello World! in body</h1>");
+			//alert("Hello World");
+			//console.log("Hello World");
+			var v1 = 100;
+			function greet(name)
+			{
+				document.write("Hello "+name+"<br>");
+			}
+			
+			function add(a,b)
+			{
+				return (a+b);
+			}
+			
+			function f1(a,b)
+			{
+				document.write(a+" : "+b+"<br>");
+			}
+			
+			greet("abhishek");
+			document.write("Sum: "+add(10,20)+"<br>");
+			f1(10,20);
+			f1(30,40,10,20);
+			f1(15);
+			//document.write(v1+" : "+v2+"<br>");
+			var f1 = 100;
+			var f2 = "AK";
+			var f3 = function(){
+				alert("Hi");
+			} 
+			f3();
+			document.write(typeof f1+"<br>");
+			document.write(typeof f2+"<br>");
+			document.write(typeof f3+"<br>");
+			
+			
+			var s1 = "Hello World!";
+			document.write(s1.length+"<br>");
+			document.write(s1.charAt(4)+"<br>");
+			document.write(s1.indexOf("rl")+"<br>");
+			document.write(s1.toUpperCase()+"<br>");
+			
+			var arr2 = [1,2,3,4,5,6];
+			
+			for(var i=0;i<arr2.length,i++)
+			{
+				document.write(arr2[i]+"<br>");
+			}
+		</script>
+		<!--
+		<script>
+			var v2 = 200;
+			document.write(v1+" : "+v2+"<br>");
+		</script>
+		
+		<script src = "myjs.js"></script>
+		-->
+	</body>
+
+</html>
+

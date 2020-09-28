@@ -1,0 +1,194 @@
+<html>
+	<head>
+		<title>Lucky Number</title>
+	</head>
+	<body>
+		<script>
+			function disp()
+			{
+			
+				var name = document.getElementById("t1").value;
+				if(name == null || name == "" || name.length > 10)
+				{
+					document.getElementById("s1").innerHTML = " * Invalid Entry";
+					return false;
+				}
+				
+				
+				var val1 = document.getElementById("input1").value;
+				var val2 = document.getElementById("input2").value;
+				var val3 = document.getElementById("input3").value;
+				if(val1 == "" || val2 == "" || val3 == "" )
+				{
+					document.getElementById("s2").innerHTML = "* Required Field";
+					return false;
+				}
+				var str = val1 + " " + val2 + ", " + val3;
+				
+				var email = document.getElementById("t3").value;
+				var em = email.split("@");
+				if(em.length != 2 || em[0].length == 0)
+				{
+					document.getElementById("s1").innerHTML = " * Invalid Entry, email format is name@company.com1";
+					return false;
+				}
+				var dn = em[1].split(".");
+				if(dn.length != 2 || dn[0].length == 0 || dn[1] != "com")
+				{
+					document.getElementById("s3").innerHTML = " * Invalid Entry, email format is name@company.com";
+					return false;
+				}
+				
+				var gender = document.getElementById("r1").value;
+				if(gender == null)
+				{
+					document.getElementById("s4").innerHTML = " * Required Field";
+					return false;
+				}
+				
+				var num = parseInt(document.getElementById("t4").value);
+				if(num < 1000)
+				{
+					document.getElementById("s5").innerHTML = " * Number should be of four digits";
+					return false;
+				}
+				
+				var pizza = document.getElementById("t51").checked;
+				var pasta = document.getElementById("t52").checked;
+				var chinese = document.getElementById("t53").checked;
+				if(pizza == false && pasta == false && chinese == false)
+				{
+					document.getElementById("s6").innerHTML = " * Required Field";
+					return false;
+				}
+				
+				document.getElementById("p1").innerHTML = name;
+				document.getElementById("p2").innerHTML = str;
+				document.getElementById("p3").innerHTML = email;
+				document.getElementById("p4").innerHTML = gender;
+				document.getElementById("p5").innerHTML = num;
+				if(pizza == true)
+				{
+					document.getElementById("p61").innerHTML = "Pizza";
+				}
+				if(pasta == true)
+				{
+					document.getElementById("p62").innerHTML = "Pasta"
+				}
+				if(chinese == true)
+				{
+					document.getElementById("p63").innerHTML = "Chinese"
+				}
+			}
+			
+			
+		</script>
+		
+		<form>
+			Name: <input type = "text" id = "t1">
+			<span id = "s1"></span><br>
+			
+			Birth Date: <input type='text' id='input1' list='month'>
+  			<datalist id="month">
+    			<option value="January">
+    			<option value="February">
+    			<option value="March">
+				<option value="April">
+    			<option value="May">
+    			<option value="June">
+				<option value="July">
+    			<option value="August">
+    			<option value="September">
+				<option value="October">
+    			<option value="November">
+    			<option value="December">
+			</datalist>
+			<input type='text' id='input2' list='date'>
+  			<datalist id="date">
+    			<option value="01">
+				<option value="02">
+				<option value="03">
+				<option value="04">
+				<option value="05">
+				<option value="06">
+				<option value="07">
+				<option value="08">
+				<option value="09">
+				<option value="10">
+				<option value="11">
+				<option value="12">
+				<option value="13">
+				<option value="14">
+				<option value="15">
+				<option value="16">
+				<option value="17">
+				<option value="18">
+				<option value="19">
+				<option value="20">
+				<option value="21">
+				<option value="22">
+				<option value="23">
+				<option value="24">
+				<option value="25">
+				<option value="26">
+				<option value="27">
+				<option value="28">
+				<option value="29">
+				<option value="30">
+				<option value="31">
+			</datalist>
+			<input type='text' id='input3' list='year'>
+  			<datalist id="year">
+    			<option value="2020">
+				<option value="2019">
+				<option value="2018">
+				<option value="2017">
+				<option value="2016">
+				<option value="2015">
+				<option value="2014">
+				<option value="2013">
+				<option value="2012">
+				<option value="2011">
+				<option value="2010">
+				<option value="2009">
+				<option value="2008">
+				<option value="2007">
+				<option value="2006">
+				<option value="2005">
+				<option value="2004">
+				<option value="2003">
+				<option value="2002">
+				<option value="2001">
+			</datalist>
+			<span id = "s2"></span><br>
+			
+			Email: <input type = "text" id = "t3">
+			<span id = "s3"></span><br>
+			
+			Gender: <input type="radio" name="r1" id = "r1" value = "Male">Male
+					<input type="radio" name="r1" id = "r1" value = "Female">Female
+					<br>
+			<span id = "s4"></span><br>
+			
+			Lucky Number: <input type = "number" id = "t4">
+			<span id = "s5"></span><br>
+			
+			Favourite Foods: <br><input type = "checkbox" name = "foods" id = "t51" value = "Pizza">Pizza<br>
+			<input type = "checkbox" name = "foods" id = "t52" value = "Pasta">Pasta<br>
+			<input type = "checkbox" name = "foods" id = "t53" value = "Chinese">Chinese<br>
+			<span id = "s6"></span><br>
+			
+			<input type = "button" value = "Send Data" onclick = "disp()"><br>
+			
+			Name: <span id = "p1"></span><br>
+			Birth Date: <span id = "p2"></span><br>
+			Email: <span id = "p3"></span><br>
+			Gender: <span id = "p4"></span><br>
+			Lucky Number: <span id = "p5"></span><br>
+			Favourite Foods: <br>
+			<span id = "p61"></span><br>
+			<span id = "p62"></span><br>
+			<span id = "p63"></span><br>
+		</form>
+	</body>
+</html>
