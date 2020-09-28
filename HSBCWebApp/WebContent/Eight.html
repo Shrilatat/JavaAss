@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script>
+            function validate(){
+                var name = window.document.getElementById("t1").value;
+                if(name == null || name == ""){
+                    alert("Username is mandatory !!");
+                    document.getElementById("t1").focus();
+                    return false;
+                }
+                else if(name.length < 5){
+                    alert("Name cannot be less than 5 characters !!");
+                    document.getElementById("t1").focus();
+                    return false;
+                }
+                else
+                    return true;
+            }
+        </script>
+        
+        <form onsubmit="return validate()">
+            Name : <input type="text" id="t1"><br><br>
+            <input type="submit"><br><br>
+
+        </form>
+    </body>
+</html>
