@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 4</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+			function display(){
+
+				var flag=0;
+				var lucky_num = document.getElementById("lucky_num").value;
+				var mail = document.getElementById("mail").value;
+
+				if(!(lucky_num>=1 && lucky_num<=100))
+				{
+					flag=1;
+					document.getElementById("num_error").innerHTML = "It has to be in range(1,100)";
+				}
+				if(!(mail.match(/^[a-zA-z]{1,10}@([a-zA-z]){1,10}\.com/g))){
+					flag=1;
+					document.getElementById("mail_error").innerHTML = "Mail Was not in required Format";
+				}
+
+				if(flag==0){
+
+					var ele = document.getElementsByName("gender");
+					var radioselect;
+					for(i=0;i<ele.length;i++) 
+					{
+						if(ele[i].checked)
+							radioselect = ele[i].value;
+					}
+
+					var ele = document.getElementsByName("food");
+					var element = [];
+					for(i=0;i<ele.length;i++) 
+					{
+						if(ele[i].checked){
+
+								element.push(ele[i].value);
+							}
+							
+					}
+
+
+					document.getElementById("display").innerHTML = "<br>Entered Details : <br>Name : " + document.getElementById("name").value + "<br>Birth Date : " + document.getElementById("date").value + "<br>Email Address : "+ document.getElementById("mail").value + "<br>Lucky Number : "+ document.getElementById("lucky_num").value + "<br>Gender : " + radioselect + "<br>Favourite Food Items : " + element;
+					
+						}
+				}
+
+
+
+			
+
+	</script>
+
+	<form>
+		
+		Name : <input type="text" name="name" id="name" required /><br><br>
+		Birth Date : <input type="date" name="date" id="date" required /><br><br>
+		Email Address : <input type="text" name="mail" id="mail" required /><span style="color: red;" id="mail_error"></span><br><br>
+		Gender : <br><input type="radio" name="gender" value="female" > <label> Female</label>
+		<br><input type="radio" name="gender"  value="male" > <label> Male</label>
+		<br><br>
+
+		Lucky Number : <input type="number" name="lucky_num" id="lucky_num" required /><span style="color: red;" id="num_error"></span><br><br>
+
+		Favourite Foods : <br>
+		<input type="checkbox" name="food" value="pizza" id="food" /><label>Pizza</label><br>
+		<input type="checkbox" name="food" value="pasta" id="food" /><label>Pasta</label><br>
+		<input type="checkbox" name="food" value="chinese" id="food" /><label>Chinese</label><br>
+
+
+		<br><input type="button" value="Send Data" onclick="display()"><br>
+
+		<span id="display"></span>
+		
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function cal(){
+			var rad = parseInt(document.getElementById("rad").value);
+
+			document.getElementById("Circumference").innerHTML = "Circumference of circle is " + 2* Math.PI *rad;;
+			document.getElementById("Area").innerHTML = "Area of circle is  " + Math.PI*Math.pow(rad,2); 
+		}
+	</script>
+	<form>
+			Enter Radius : <input type="text" name="rad" id="rad" /><br><br>
+			<input type="button" value="Calculate Circumference and Area" onclick="cal()" />
+			<br><br>
+			<p id="Circumference"></p>
+			<p id="Area"></p>	
+			
+			<br>
+
+	</form>
+</body>
+</html>
