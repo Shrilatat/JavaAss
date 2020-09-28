@@ -1,0 +1,47 @@
+<html>
+    <body>
+        <script>
+            function f1(){
+                document.getElementById("s1").innerHTML =document.getElementById("name").value;
+                document.getElementById("s2").innerHTML =document.getElementById("date").value;
+                document.getElementById("s3").innerHTML =document.getElementById("email").value;
+                document.getElementById("s4").innerHTML =document.getElementById("gender").value;
+                document.getElementById("s5").innerHTML =document.getElementById("number").value;
+                
+                var arr =  document.getElementsByName("food");
+                var selected = new Array();
+                for(var i =0;i < arr.length;i++){
+                    if(arr[i].checked)
+                        selected.push(arr[i].value);
+                }
+                document.getElementById("s6").innerHTML = selected.join(",");
+            }
+        </script>
+        
+        <form>
+            Name : <input type="text" id="name"><br><br>
+            Birth Date : <input type="date" id="date"><br><br>
+            Email : <input type="text" id="email"><br><br>
+            Gender : <input type="radio" name="gender" id="gender" value="Male">Male
+                    <input type="radio" name="gender" id="gender" value="Female">Female
+            <br><br>
+            Lucky Number : <input type="number" id="number"> (Enter number between 1  to 100)<br><br>
+            Favorite Foods : <br>
+                    <input type="checkbox" id="food" value="Pizza" name="food">Pizza<br>
+                    <input type="checkbox" id="food" name="food" value="Pasta" name="food">Pasta<br>
+                    <input type="checkbox" id="food" value="Tea">Tea<br>
+            <br><br>
+            <input type="button" value="Send Data" onclick="f1()">
+            <input type="reset">
+            <br><br>
+            
+            Your Details:<br>
+            Name :<span id="s1"></span><br>
+            Birth Date :<span id="s2"></span><br>
+            Email Address :<span id="s3"></span><br>
+            Gender :<span id="s4"></span><br>
+            Lucky Number :<span id="s5"></span><br>
+            Favorite Food :<span id="s6"></span><br>
+        </form>
+    </body>
+</html>
