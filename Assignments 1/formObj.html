@@ -1,0 +1,56 @@
+<html>
+<head>
+    <!--   commenttt-->
+    <style>
+        .labelClass{
+            float: left;
+            width: 113px;
+        }
+    </style>
+    <body>
+
+        <script>
+            
+            function saveData(){
+                var n=document.getElementById("n1").value;
+                var bd=document.getElementById("d1").value;
+                if(document.getElementById("m").checked)
+                    val="male";
+                if(document.getElementById("f").checked)
+                    val="female";
+                var ln=parseInt(document.getElementById("t1").value)
+                if(document.getElementById("c1").checked)
+                    v2="Pizza";
+                    if(document.getElementById("c2").checked)
+                    v2="Pasta"
+                    if(document.getElementById("c3").checked)
+                    v2="Chinese"
+                var myObj = {
+                    "name":n,"birthdate":bd,"gender":val,"luckynum":ln,"food":v2
+                }
+                document.write("Name : "+myObj.name+"<br>Birth Date : "+myObj.birthdate
+                +"<br>Gender : "+myObj.gender+"<br>Lucky Number : "+myObj.luckynum+"<br>Favorite food : "+myObj.food)
+            }
+
+        </script>
+        <form>
+            <label for="name" class="labelClass">Name :</label><input type="text" id="n1"><br><br>
+            <label for="name" class="labelClass">Birth Date : </label><input type="date" id="d1"><span style="padding: 20px;">(Use format name@company.com)</span><br><br>
+            
+            <label for="name" class="labelClass">gender :</label><input type="radio" id="m">Male 
+                    <input type="radio" id="f">Female
+                    <br><br>
+            <label for="name" class="labelClass">Lucky Number : </label><input type="text" id="t1"><span style="padding: 20px;">(Number between 1 and 100)</span> <br><br>
+            <label for="name" class="labelClass">Favorite food : </label> <input type="checkbox" id="c1">Pizza   
+            <input type="checkbox" id="c2">Pasta 
+            <input type="checkbox" id="c3">Chinese <br>
+
+            <br>
+            <input type="button" value="Send Data" onclick="saveData()">
+        </form>
+        
+    </body>
+</head>
+
+
+</html>

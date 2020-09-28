@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        function display(){
+            var num=parseInt(document.getElementById("r").value);
+            
+            document.getElementById("a1").innerHTML=Math.PI* Math.pow(num,2);
+            document.getElementById("c1").innerHTML=2*Math.PI*num;
+
+        }
+    </script>
+    <form>
+        Enter Radius : <input type="text" id="r"><br><br>
+        <input type="button" value="display" onclick="display()"><br><br>
+    </form>
+    Area : <span id="a1"></span><br><br>
+    Circumference : <span id="c1"></span>
+</body>
+</html>
