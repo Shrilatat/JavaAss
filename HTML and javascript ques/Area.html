@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circle</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function f1(){
+			var1=parseInt(document.getElementById("r").value);
+			var2=Math.round(parseFloat(Math.PI*var1*var1));
+			
+			//document.getElementById("p1").innerHTML=("Area: "+var2);
+			//document.write("Area: "+Math.round(var2));
+			//document.write("<br>");
+			var3=Math.round(parseFloat(2*Math.PI*var1));
+			//document.getElementById("p2").innerHTML=("Circumference: +var3");
+			//document.write("Circumference: "+Math.round( var3));*/
+			document.getElementById("p1").innerHTML=("Area: "+var2+"<br>"+"Circumference: "+var3);
+		}
+	</script>
+	<form>
+Enter Radius: <input type="text" name="Radius" id="r" ><br>
+<input type="button" value="Calculate" name="Calculate" onclick="f1()"><br>
+<p id="p1"> </p>
+</form>
+</body>
+</html>
