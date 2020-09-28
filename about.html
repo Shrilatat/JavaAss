@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+    </style>
+    <title>About Page</title>
+</head>
+<body>
+    <img src="https://wiki.mozilla.org/images/6/60/Drumbeatlogo.png" alt="Drumbeat" width="50%" height="50%">
+    <br>
+    <br>
+    <h1>About</h1>
+    <p>Drumbeat is an initiative that wants to keep the web open and do it through <br>practical projects
+	and local events that gather smart, creative people around <br>big ideas,solving problems and building the open web...</p>
+    <h1>Projects</h1>
+    <ul>
+        <li>Featured</li>
+        <ul>
+            <li><a href="">School of Webcraft</a></li>
+            <li><a href="">Crisis of Commons</a></li>
+        </ul>
+        <li>Latest</li>
+        <ul>
+            <li><a href="">JessyInk</a></li>
+            <li><a href="">PrivacyComp</a></li>
+        </ul>
+    </ul>
+    <h1>Festival Schedule</h1>
+    <table>
+        <tr>
+          <th>Time</th>
+          <th>Topic</th>
+        </tr>
+        <tr>
+          <td>18:00 - 20:30</td>
+          <td>Registration</td>
+        </tr>
+        <tr>
+          <td>20:30 - 23:00</td>
+          <td>Keynote</td>
+        </tr>
+    </table>
+    <h1>Signup</h1>
+    <form>
+        <label for="name">Name:  </label>
+        <input type="text" id="name" name="name" style="margin-left: 8%" value=""><br><br>
+
+        <label for="email">Email:   </label>
+        <input type="email" id="email" style="margin-left: 8%" name="email" value=""><br><br>
+        
+        <label for="location">Location:  </label>
+        <select id="location" style="margin-left: 6.5%" name="location">
+            <option value="london">London</option>
+            <option value="newyork">New York</option>
+            <option value="paris">Paris</option>
+            <option value="San Francisco">San Francisco</option>
+        </select><br><br>
+
+        <label for="gender">Gender:  </label>
+        <input type="radio" id="male" style="margin-left: 7%" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <label for="experience">Experience:  </label><br><br>
+        <textarea name="" id="" cols="30" rows="5"></textarea><br><br>
+
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+</html>

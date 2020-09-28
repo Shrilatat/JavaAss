@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Circle</title>
+</head>
+<body>
+	<script>
+		function disp()
+		{
+			var n1 = (document.getElementById("t1").value);
+			var area = 3.14*Math.pow(n1,2);
+			var circum = 3.14*2*n1;
+			document.getElementById("p1").innerHTML = area;
+			document.getElementById("p2").innerHTML = circum;
+		}
+		
+	</script>
+	<form>
+		Enter Radius: <input type = "number" id = "t1"><br><br>
+		<input type = "button" value = "display" onclick = "disp()"><br><br>
+		Area: <span id = "p1"></span><br>
+		Circumference: <span id = "p2"></span>
+	</form>
+</body>
+</html>
