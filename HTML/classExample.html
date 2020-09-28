@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+        function Person(pid, pname, page){
+            this.pid = pid;
+            this.pname = pname;
+            this.page = page;
+            this.displayDetails = function(){
+                document.write(this.pid + ":" + this.pname + ":" +this.age);
+            }
+        }
+
+        var p1 = new Person(1,Kshitij,23);
+        var p2 = new Person(2,Pushkar,23);
+    </script>
+</body>
+</html>
