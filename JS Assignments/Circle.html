@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circle Calculator</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function result(){
+				var radius = document.getElementById("radius").value;
+				var area=3.14*radius*radius;
+				document.getElementById("area").innerHTML="Area : "+area; 
+				var circumference= 2*3.14*radius;
+				document.getElementById("circumference").innerHTML="Circumference : "+circumference;
+			}
+	</script>
+
+	<center>
+		<h2>Circle Data Calculator</h2><br>
+		<label for="radius">Enter Radius </label>
+		<input type="number" name="radius" id="radius"><br><br>
+		<input type="button" value="Display"onclick="result()"><br>
+		<br><div id="area"></div><br>
+		<div id="circumference"></div>
+
+	</center>
+
+</body>
+</html>
