@@ -43,6 +43,16 @@
     <url-pattern>/validate</url-pattern>
     </servlet-mapping>
     
+     <servlet>
+  <servlet-name>display</servlet-name>
+  <servlet-class>com.trg.DisplayFormServlet</servlet-class>
+  </servlet>
+    
+    <servlet-mapping>
+    <servlet-name>display</servlet-name>
+    <url-pattern>/display</url-pattern>
+    </servlet-mapping>
+    
  <welcome-file-list>
   <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

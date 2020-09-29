@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+    </style>
+    <title>User Input Form</title>
+</head>
+<body>
+    
+    <p>Personal Particular</p>
+    <form method="post" action="display">
+        <label for="name">Name:  </label>
+        <input type="text" id="name" name="name" style="margin-left: 8%" value=""><br><br>
+
+        <label for="password">Password:   </label>
+        <input type="password" id="password" style="margin-left: 5%" name="password" value=""><br><br>
+        
+         <label for="gender">Gender:  </label>
+        <input type="radio" id="male" style="margin-left: 7%" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+        
+        <label for="age">Age:  </label>
+        <select id="age" style="margin-left: 6.5%" name="age">
+            <option value="< 1 year old">< 1 year old</option>
+            <option value="< 10 year old">< 10 year old</option>
+            <option value="< 20 year old">< 20 year old</option>
+          
+        </select><br><br>
+        
+          <h4>Languages: </h4>
+          <input type="checkbox" id="java" name="languages" value="Java">Java
+          <input type="checkbox" id="c/c++" name="languages" value="C/C++">C/C++
+          <input type="checkbox" id="c#" name="languages"  value="C#">C#
+         <br><br>
+        
+       
+
+        <label for="instruction">Instruction:  </label><br><br>
+        <textarea name="instruction" id="" cols="30" rows="5"></textarea><br><br>
+
+        <input type="submit" value="send">
+        <input type="submit" value="clear">
+    </form>
+   
+    
+</body>
+</html>
