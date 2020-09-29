@@ -53,6 +53,16 @@
     <url-pattern>/display</url-pattern>
     </servlet-mapping>
     
+     <servlet>
+  <servlet-name>bookcheck</servlet-name>
+  <servlet-class>com.trg.BookStoreServlet</servlet-class>
+  </servlet>
+    
+    <servlet-mapping>
+    <servlet-name>bookcheck</servlet-name>
+    <url-pattern>/bookcheck</url-pattern>
+    </servlet-mapping>
+    
  <welcome-file-list>
   <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
