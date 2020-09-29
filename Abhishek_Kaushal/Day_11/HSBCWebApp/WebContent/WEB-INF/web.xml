@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>HSBCWebApp</display-name>
+ 	<servlet>
+ 		<servlet-name>abc</servlet-name>
+ 		<servlet-class>com.hsbc.HelloWorldServlet</servlet-class>
+ 	</servlet>
+ 	
+  <servlet-mapping>
+  	<servlet-name>abc</servlet-name>
+  	<url-pattern>/helloWorld</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+ 		<servlet-name>processname</servlet-name>
+ 		<servlet-class>com.hsbc.ProcessNameServlet</servlet-class>
+ 	</servlet>
+ 	
+  <servlet-mapping>
+  	<servlet-name>processname</servlet-name>
+  	<url-pattern>/processName</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+ 		<servlet-name>sum</servlet-name>
+ 		<servlet-class>com.hsbc.SumServlet</servlet-class>
+ 	</servlet>
+ 	
+  <servlet-mapping>
+  	<servlet-name>sum</servlet-name>
+  	<url-pattern>/sumNumber</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+ 		<servlet-name>simpleinterest</servlet-name>
+ 		<servlet-class>com.hsbc.SimpleInterestServlet</servlet-class>
+ 	</servlet>
+ 	
+  <servlet-mapping>
+  	<servlet-name>simpleinterest</servlet-name>
+  	<url-pattern>/simpleInterest</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+ 		<servlet-name>login</servlet-name>
+ 		<servlet-class>com.hsbc.login.loginServlet</servlet-class>
+ 	</servlet>
+ 	
+  <servlet-mapping>
+  	<servlet-name>login</servlet-name>
+  	<url-pattern>/loginApp</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+ 		<servlet-name>userinput</servlet-name>
+ 		<servlet-class>com.hsbc.userinput.UserInputServlet</servlet-class>
+ 	</servlet>
+ 	
+  <servlet-mapping>
+  	<servlet-name>userinput</servlet-name>
+  	<url-pattern>/inputForm</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+ 		<servlet-name>book</servlet-name>
+ 		<servlet-class>com.hsbc.bookrecommender.BookRecommendServlet</servlet-class>
+ 	</servlet>
+ 	
+  <servlet-mapping>
+  	<servlet-name>book</servlet-name>
+  	<url-pattern>/bookRecommend</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+ 		<servlet-name>display</servlet-name>
+ 		<servlet-class>com.hsbc.DisplayServlet</servlet-class>
+ 	</servlet>
+ 	
+  <servlet-mapping>
+  	<servlet-name>display</servlet-name>
+  	<url-pattern>/display</url-pattern> 
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
