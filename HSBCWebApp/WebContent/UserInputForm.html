@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User Input Form</title>
+</head>
+<body>
+	<h1>User Input Form</h1>
+	
+	<form action="userInputForm" method="post">
+		<fieldset>
+			<legend>Personal Particular</legend>
+			Name: <input type="text" name="name"><br>
+			Password: <input type="password" name="password"><br>
+			Gender: <input type="radio" name="sex" id="sex">Male<input type="radio" name="sex" id="sex">Female<br>
+			Age: <select name="age">
+					<option value="<1">< 1 year old</option>
+					<option value="=1">1 year old</option>
+					<option value=">1">>1 year old</option>
+				</select>
+		</fieldset>
+		<fieldset>
+			<legend>Languages</legend>
+			<input type="checkbox" name="language" value="java">Java
+			<input type="checkbox" name="language" value="ccpp">C/C++
+			<input type="checkbox" name="language" value="Csharp">C#
+		</fieldset>
+		<fieldset>
+			<legend>Instruction</legend>
+			<textarea rows="5" cols="30">Enter your instructions here...</textarea>
+		</fieldset>
+		<input type="submit" value="SEND">
+		<input type="reset" value="CLEAR">
+	</form>
+</body>
+</html>
