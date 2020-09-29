@@ -1,0 +1,55 @@
+<html>
+<head>
+<title> Order </title>
+</head>
+<body bgcolor="lightgray">
+<script>
+	var name;
+	var Id;
+	var date1=new date();
+	var date2=new date();
+	var total;
+	function display()
+	{
+		name=document.getElementById("t2").value;
+		Id=parseInt(document.getElementById("t1").value);
+		date1=document.getElementById("t3").value;
+		date2=document.getElementById("t4").value;
+		total=parseInt(document.getElementById("t5").value);
+		
+		if((name==null || name=="")||(isNaN(Id))||(date1==null || date2=="")||(date2==null || date2=="")||(isNaN(total))){
+			alert("All fields are mandatory!");
+			return false;
+		}
+		if(name.length<6)
+		{
+			alert("Customer name must be greater than 5 characters!");
+			document.getElementById("t2").focus();
+			return false;
+		}
+		if(date1>date2)
+		{
+			alert("Billing date can not be greater than shipping date!");
+			return false;
+		}
+		else
+		{
+		document.write("Order ID:"+Id+"<br>");
+		document.write("Customer Name:"+name+"<br>");
+		document.write("Billing Date:"+date1+"<br>");
+		document.write("Shipping Date:"+date2+"<br>");
+		document.write("Order Total:"+total);
+		}
+	}
+	
+</script> 
+<form>
+  Order ID: <input type="text" id="t1"><br><br>
+  Customer Name: <input type="text" id="t2"><br><br>
+  Billing Date: <input type="date" id="t3"><br><br>
+  Shipping Date: <input type="date" id="t4"><br><br>
+  Order Total: <input type="text" id="t5"><br><br>
+             <input type="button" onclick="display()" value="Display"><br><br>
+</form>
+</body>
+</html>
