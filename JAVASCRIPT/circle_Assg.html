@@ -1,0 +1,25 @@
+<html>
+<head><title>Calculates Area and Circumference of a circle</title></head>
+<body bgcolor="lightgreen">
+	
+	<script>
+		var radius;
+		var a;
+		var c;
+		function Display()
+		{
+			radius=parseInt(document.getElementById("t1").value);
+			a = Math.PI * radius * radius;
+			document.write("Area of circle: "+a+"<br>");
+			c = 2 * Math.PI * radius;
+			document.write("Circumference of circle: "+c);
+		}
+		
+	</script>
+	<form>
+		Radius: <input type="text" id="t1"><br><br>
+				<input type="button" onclick="Display()" value="Display">
+			
+	</form>
+</body>
+</html>
