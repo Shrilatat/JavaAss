@@ -12,7 +12,7 @@ public class DBConnection {
 		try {
 			DriverManager.registerDriver(new org.apache.derby.jdbc.ClientDriver());
 
-			conn = DriverManager.getConnection("jdbc:derby://localhost:1527/dbname");
+			conn = DriverManager.getConnection("jdbc:derby://localhost:1527/Order");
 			
 		}
 		catch(SQLException e) {
