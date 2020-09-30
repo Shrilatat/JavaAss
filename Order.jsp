@@ -8,19 +8,19 @@
 </head>
 <body>
 
-<%@ page import = "com.hsbc.database.OrderDao" %>
+<%@ page import = "com.hsbc.database.OrderDao" import = "com.hsbc.database.Order"%>
 
-<%@ page import = "com.hsbc.database.Order" %>
 
 <%
-	int num = Integer.parseInt(request.getParameter("ono"));
+	int num = (int)request.getAttribute("ono");
 	OrderDao odao = new OrderDao();
 	Order o = odao.getOrder(num);	
 %>
 
-<table>
-<tr> <th>Item name</th>  <th> Price</th>  </tr>
-<tr> <td><%= o.getOname() %>  </td>  <td> <%= o.getOPrice() %></td> </tr>
+<table border=1 >
+	<tr> <th>Order num </th> <th>Item name</th>  <th> Price</th>  </tr>
+	<tr> <td><%= o.getOnumber() %>  </td> <td><%= o.getOname() %>  </td> <td> <%= o.getOPrice() %></td> </tr>
 </table>
+
 </body>
 </html>

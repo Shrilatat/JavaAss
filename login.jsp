@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,16 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method = "post" action = "user.jsp">
+<form method = "get" action = "loginStore.jsp">
 		
 			Username:  <input type = "text" name = "uname"> <br> <br>
-			Age:  <input type = "text" name = "age"> <br> <br>
-			
-			Email:  <input type = "email" name = "mail"> <br> <br>
-	<!-- 	Password:  <input type = "password" name = "pass"> <br> <br>	 -->		
+			Password:  <input type = "password" name = "pass"> <br> <br>		
 			<input type = "submit" > <br> <br>
 		
 </form>
-
 </body>
 </html>
