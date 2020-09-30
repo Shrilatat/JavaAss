@@ -16,7 +16,7 @@ public class BookDao implements BookIntf{
 		conn = DBConnection.getConnection();
 	}
 
-	public List<Book> display(String lang) {
+	public List<Book> display(String bookid) {
 		
 		List<Book> books = new ArrayList<>();
 
@@ -24,10 +24,10 @@ public class BookDao implements BookIntf{
 		
 		try {
 			Statement stmt = conn.createStatement();
-			String sql = "select * from bookstore where category = '" + lang + "'";
+			String sql = "select * from bookstore where bookid = '" + bookid + "'";
 			rs = stmt.executeQuery(sql);
 			while(rs.next()) {
-				books.add(new Book(rs.getString(1),rs.getString(2)));
+				books.add(new Book(rs.getString(1),rs.getString(2),rs.getString(3)));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -3,13 +3,16 @@ package com.hsbc.assignments1;
 public class Book {
 	private String language;
 	private String title;
-	
-	public Book() {}
-	
-	public Book(String lang, String title) {
+	private String bookid;
+
+	public Book() {
+	}
+
+	public Book(String language, String title, String bookid) {
 		super();
-		this.language = lang;
+		this.language = language;
 		this.title = title;
+		this.bookid = bookid;
 	}
 
 	public String getLanguage() {
@@ -28,11 +31,17 @@ public class Book {
 		this.title = title;
 	}
 
-	@Override
-	public String toString() {
-		return "Book [language=" + language + ", title=" + title + "]";
+	public String getBookid() {
+		return bookid;
 	}
 
-	
-	
+	public void setBookid(String bookid) {
+		this.bookid = bookid;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [language=" + language + ", title=" + title + ", bookid=" + bookid + "]";
+	}
+
 }
