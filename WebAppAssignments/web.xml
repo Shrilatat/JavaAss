@@ -3,6 +3,50 @@
   <display-name>HSBCWebApp</display-name>
   
   <servlet>
+  <servlet-name>abc</servlet-name>
+  <servlet-class>com.trg.HelloWorldServlet</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  
+  <servlet-name>abc</servlet-name>
+  <url-pattern>/HelloWorld</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>processname</servlet-name>
+  <servlet-class>com.trg.ProcessNameServlet</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  
+  <servlet-name>processname</servlet-name>
+  <url-pattern>/processName</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>addition</servlet-name>
+  <servlet-class>com.trg.AdditionServlet</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  
+  <servlet-name>addition</servlet-name>
+  <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>simpleinterest</servlet-name>
+  <servlet-class>com.trg.SimpleInterstServlet</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  
+  <servlet-name>simpleinterest</servlet-name>
+  <url-pattern>/simpleinterest</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
   <servlet-name>loginservlet</servlet-name>
   <servlet-class>com.trg.LoginServlet</servlet-class>
   
@@ -13,7 +57,7 @@
   <url-pattern>/login</url-pattern>
   </servlet-mapping>
   
-   <servlet>
+     <servlet>
   <servlet-name>formservlet</servlet-name>
   <servlet-class>com.trg.FormServlet</servlet-class>
   
