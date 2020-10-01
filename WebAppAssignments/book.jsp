@@ -7,12 +7,14 @@
 </head>
 <body>
 <% 
-
-  bookDao dao = new bookDao();
-  out.println("Book ID:" + Integer.parseInt(request.getParameter("bookid")));
-  out.println(dao.getBook(Integer.parseInt(request.getParameter("bookid"))));
-
+bookDao dao = new bookDao();
 %>
+ 
+ <table border = "1">
+ <tr><td>BookID</td><td>BookName</td></tr>
+ <tr><td><%=Integer.parseInt(request.getParameter("bookid"))%></td><td><%=dao.getBook(Integer.parseInt(request.getParameter("bookid")))%></td></tr>
+ 
+  
 
 </body>
 </html>
