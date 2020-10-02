@@ -1,0 +1,25 @@
+<html>
+
+	<head>
+		<title>Circle Calculator</title>
+	</head>
+	
+<body bgcolor="lightgrey">
+
+	<script>
+		function f1(){
+			var a=Number(document.getElementById("t1").value);
+			document.getElementById("p1").innerHTML = (22/7) * a * a;
+			document.getElementById("p2").innerHTML = 2 * (22/7) * a;
+		}
+	</script>
+	
+	<form method="get">
+		Radius : <input type="text" name="t1" id="t1"><br><br>
+		<input type="button" value="Display" onclick="f1()"><br><br>
+		Area => <span id="p1"></span><br><br>
+		Circumference => <span id="p2"></span><br><br>
+	</form>
+	
+</body>
+</html>

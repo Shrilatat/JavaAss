@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <title>MY ORDER</title>
+</head>
+
+<script>
+
+	function validate() 
+	{
+		var name = document.getElementById("oName").value;
+		
+		if (name.length < 6) 
+			alert("Length of name cannot be less than 6");
+		
+		var startDt = document.getElementById("dBill").value;
+		var endDt = document.getElementById("dShip").value;
+		
+		if ((new Date(startDt).getTime() > new Date(endDt).getTime()))
+		alert("Billing Date cannot be greater than Shipping Date!")
+		
+		display();
+	}
+	
+	function display() 
+	{
+		document.getElementById("id").innerHTML = "Order ID :" + document.getElementById("oID").value;
+		document.getElementById("name").innerHTML = "Cust Name :" + document.getElementById("oName").value;
+		
+		var startDt = document.getElementById("dBill").value;
+		var endDt = document.getElementById("dShip").value;
+		
+		document.getElementById("bill").innerHTML = "Billing date :" + startDt;
+		document.getElementById("ship").innerHTML = "Billing date :" + endDt;
+		document.getElementById("total").innerHTML = "Order Total:" + document.getElementById("oTotal").value;
+	}
+
+</script>
+
+<body bgcolor="lightgrey">
+
+	<form>
+		<table>
+			<tr><td>Order ID :</td>
+			<td><input type="text" id="oID"> </td></tr>
+		
+			<tr><td>Customer Name:</td>
+			<td><input type="text" id="oName"></td></tr>
+		
+			<tr><td>Billing Date:</td>
+			<td><input type="date" id="dBill" /></td></tr>
+			
+			<tr><td>Shipping Date:</td>
+			<td><input type="date" id="dShip" /></td></tr>
+			
+			<tr><td>Order Total</td>
+			<td><input type="text" id="oTotal" /></td></tr>
+		</table>
+		
+		<input type="Button" value="Display" onclick="validate()">
+	</form>
+	
+  <p id="id"></p>
+  <p id="name"></p>
+  <p id="bill"></p>
+  <p id="ship"></p>
+  <p id="total"></p>
+  
+</body>
+
+</html>

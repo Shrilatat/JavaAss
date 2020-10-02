@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title> Welcome </title>
+	</head>
+	<body bgcolor="lightblue">
+	<script>
+		function f1()
+			var name = window.document.forms[0].t1.value;
+			document.write("Hello "+ name);
+	</script>
+	
+	<form>
+		Username : <input type="text" name="t1" id="t1"><br><br>
+		<input type="button" value="Greet" onclick="f1()">
+	</form>
+	</body>
+</html>	
