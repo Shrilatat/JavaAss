@@ -12,7 +12,8 @@
 <br>
 <h2>Hey! Welcome. Please enter your credentials to login.</h2><br>
 <br>
-<a href="Login.jsp">Login</a>
+
+<jsp:forward page="Login.jsp" />
 
 </body>
 </html>

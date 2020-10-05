@@ -7,15 +7,14 @@
 
 
 	<servlet>
-		<servlet-name>LoginServlet</servlet-name>
-		<servlet-class>com.hsbc.caseStudy1.LoginServlet</servlet-class>
+		<servlet-name>Controller</servlet-name>
+		<servlet-class>com.hsbc.caseStudy1.Controller</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>LoginServlet</servlet-name>
-		<url-pattern>/login</url-pattern>
+		<servlet-name>Controller</servlet-name>
+		<url-pattern>/controller</url-pattern>
 	</servlet-mapping>
-
 
 	<servlet>
 		<servlet-name>EmployeeServlet</servlet-name>

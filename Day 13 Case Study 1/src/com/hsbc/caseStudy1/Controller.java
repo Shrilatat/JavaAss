@@ -1,3 +1,4 @@
+
 package com.hsbc.caseStudy1;
 
 import java.io.*;
@@ -10,20 +11,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class LoginServlet extends HttpServlet {
+public class Controller extends HttpServlet {
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
+
+		// servlet part for logging in an employee
 
 		String name = req.getParameter("name");
 		String pass = req.getParameter("pass");
 
-		LoginDao dao = new LoginDao();
+		LoginDao obj2 = new LoginDao();
 
 		try {
-			if (dao.verifyData(name, pass) == true) {
-				RequestDispatcher rd = req.getRequestDispatcher("welcomeEmp.jsp");
+			if (obj2.verifyData(name, pass) == true) {
+				RequestDispatcher rd = req.getRequestDispatcher("/welcomeEmp.jsp");
 				rd.forward(req, resp);
 			} else {
 				out.print("<html>");

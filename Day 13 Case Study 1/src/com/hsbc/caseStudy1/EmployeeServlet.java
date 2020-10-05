@@ -16,15 +16,17 @@ public class EmployeeServlet extends HttpServlet {
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
 
+		// servlet part in order to add employee
+
 		String eid = req.getParameter("eid");
 		String ename = req.getParameter("ename");
 		String sal = req.getParameter("sal");
 		String dept = req.getParameter("dept");
 
-		EmpDao dao = new EmpDao();
+		EmpDao obj1 = new EmpDao();
 
 		try {
-			if (dao.addEmp(eid, ename, sal, dept) == true) {
+			if (obj1.addEmp(eid, ename, sal, dept) == true) {
 				RequestDispatcher rd = req.getRequestDispatcher("welcomeEmp.jsp");
 				rd.forward(req, resp);
 			} else {
@@ -36,6 +38,5 @@ public class EmployeeServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 }

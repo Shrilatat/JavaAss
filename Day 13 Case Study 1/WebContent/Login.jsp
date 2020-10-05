@@ -9,7 +9,7 @@
 </head>
 <body bgcolor="lightgrey">
 	<h1>Employee Information System</h1>
-	<form method="post" action="login">
+	<form method="post" action="controller">
 		<table>
 			<tr>
 				<td>Please enter your user name :</td>

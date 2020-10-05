@@ -8,17 +8,16 @@
 </head>
 <body bgcolor="lightgrey">
 	<h1>Employee Information System</h1>
-	
+
 	<h2>Welcome</h2>
-	
-	
+
+
 	<table>
 		<tr>
 			<td><a href="employeeDetails.jsp">Add new Employee</a></td>
 		</tr>
 		<tr>
-			<td><br>
-			<a href="viewEmployee.jsp">View all Employees</a></td>
+			<td><a href="viewEmployee.jsp">View all Employees</a></td>
 		</tr>
 		<br>
 		<br>
