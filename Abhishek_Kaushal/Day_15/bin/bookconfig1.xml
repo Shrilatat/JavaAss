@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean id = "book1" class="com.hsbc.Book1">
+ 	
+ 	<constructor-arg type="int" value="101"></constructor-arg>
+ 	<constructor-arg type="java.lang.String" value="Java"></constructor-arg>
+ 	<constructor-arg type="com.hsbc.Author" ref ="author"></constructor-arg>
+ 	<constructor-arg type="int" value="111"></constructor-arg>
+ 	<constructor-arg type="java.lang.String" value="XYZ"></constructor-arg>
+ 	<constructor-arg type="int" value="500"></constructor-arg>
+ </bean>
+ 
+ <bean id = "author" class="com.hsbc.Author">
+ 	<property name="fname" value="AAA"/>
+ 	<property name="lname" value="BBB"/>
+ 	<property name="age" value="22"/>
+ 	<property name="email" value="bv@hg.com"/>
+ 	<property name="phone" value="6454"/>
+ 	<property name="address" value="jjkadvga"/>
+ </bean>
+ 
+ </beans>

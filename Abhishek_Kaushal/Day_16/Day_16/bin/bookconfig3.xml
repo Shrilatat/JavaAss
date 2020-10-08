@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bm" class="com.hsbc.BookManager">
+		<property name="books">
+			<list>
+				<ref bean="book1"/>
+				<ref bean="book2"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="book1" class="com.hsbc.Book1">
+
+		<constructor-arg type="int" value="101"></constructor-arg>
+		<constructor-arg type="java.lang.String" value="Java"></constructor-arg>
+		<constructor-arg type="com.hsbc.Author" ref="author1"></constructor-arg>
+		<constructor-arg type="int" value="111"></constructor-arg>
+		<constructor-arg type="java.lang.String" value="XYZ"></constructor-arg>
+		<constructor-arg type="int" value="500"></constructor-arg>
+	</bean>
+
+	<bean id="author1" class="com.hsbc.Author">
+		<property name="fname" value="AAA" />
+		<property name="lname" value="BBB" />
+		<property name="age" value="22" />
+		<property name="email" value="bv@hg.com" />
+		<property name="phone" value="6454" />
+		<property name="address" value="jjkadvga" />
+	</bean>
+	
+	<bean id="book2" class="com.hsbc.Book1">
+
+		<constructor-arg type="int" value="102"></constructor-arg>
+		<constructor-arg type="java.lang.String" value="C++"></constructor-arg>
+		<constructor-arg type="com.hsbc.Author" ref="author2"></constructor-arg>
+		<constructor-arg type="int" value="222"></constructor-arg>
+		<constructor-arg type="java.lang.String" value="ABC"></constructor-arg>
+		<constructor-arg type="int" value="1000"></constructor-arg>
+	</bean>
+
+	<bean id="author2" class="com.hsbc.Author">
+		<property name="fname" value="XXX" />
+		<property name="lname" value="YYY" />
+		<property name="age" value="44" />
+		<property name="email" value="mn@klcom" />
+		<property name="phone" value="1212" />
+		<property name="address" value="vfkv" />
+	</bean>
+
+
+</beans>

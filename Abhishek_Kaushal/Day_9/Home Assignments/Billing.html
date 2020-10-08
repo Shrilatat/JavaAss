@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Billing</title>
+	</head>
+	<body>
+		<script>
+			function disp()
+			{
+
+				var orderId = document.getElementById("t1").value;
+				if(orderId == null || orderId == "")
+				{
+					document.getElementById("s1").innerHTML = " * Order ID is a required field";
+					return false;
+				}
+				
+				var custName = document.getElementById("t2").value;
+				if(custName == null || custName == "" || custName.length < 5)
+				{
+					document.getElementById("s2").innerHTML = " * Customer Name must contain atleast five characters";
+					return false;
+				}
+				
+				var billDate = document.getElementById("t3").value;
+				var parts = billDate.split("/");
+				if(billDate == null || billDate == "" || parts.length < 3)
+				{
+					document.getElementById("s3").innerHTML = " * Invalid Date";
+					return false;
+				}
+				
+				var shipDate = document.getElementById("t4").value;
+				var parts1 = shipDate.split("/");
+				if(shipDate == null || shipDate == "" || parts1.length < 3)
+				{
+					document.getElementById("s4").innerHTML = " * Invalid Date";
+					return false;
+				}
+				
+				if(parts[2] > parts1[2] || parts[1] > parts1[1] || parts[0] > parts1[0])
+				{
+					document.getElementById("s3").innerHTML = " * Billing date must be earlier than shipping date";
+					return false;
+				}
+				
+				var orderTotal = parseInt(document.getElementById("t5").value);
+				if(orderTotal == null || orderId == "")
+				{
+					document.getElementById("s1").innerHTML = " * Order ID is a required field";
+					return false;
+				}
+				
+				document.getElementById("p1").innerHTML = orderId;
+				document.getElementById("p2").innerHTML = custName;
+				document.getElementById("p3").innerHTML = billDate;
+				document.getElementById("p4").innerHTML = shipDate;
+				document.getElementById("p5").innerHTML = orderTotal;
+			}
+		</script>
+		
+		<form>
+			Order ID: <input type = "text" id = "t1">
+			<span id = "s1"></span><br>
+			
+			Customer Name: <input type = "text" id = "t2">
+			<span id = "s2"></span><br>
+			
+			Enter Billing Date(dd/mm/yyy format only): <input type = "text" id = "t3">
+			<span id = "s3"></span><br>
+			
+			Enter Shipping Date(dd/mm/yyy format only): <input type = "text" id = "t4">
+			<span id = "s4"></span><br>
+			Order Total: <input type = "text" id = "t5">
+			<span id = "s5"></span><br>
+			
+			<input type = "button" value = "display" onclick = "disp()"><br>
+			
+			Order ID: <span id = "p1"></span><br>
+			Customer Name: <span id = "p2"></span><br>
+			Billing Date: <span id = "p3"></span><br>
+			Shipping Date: <span id = "p4"></span><br>
+			Order Total: <span id = "p5"></span><br>
+		</form>
+	</body>
+</html>

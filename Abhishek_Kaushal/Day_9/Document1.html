@@ -1,0 +1,38 @@
+<html>
+	<body>
+	<script>
+	
+			function mytime(){
+				var d1 = new Date();
+				document.write(d1+"<br>");
+			}
+			
+			setInterval(mytime, 1000);
+	
+			function Person(pid, pname, age)
+			{
+				this.pid=pid;
+				this.pname=pname;
+				this.age=age;
+				this.display=function()
+				{
+					document.write(this.pid+" : "+this.pname+" : "+this.age+"<br>");
+				}
+			}
+			
+			var p1= new Person(1,"Pushkar",23);
+			p1.display();
+			
+			var personObj = {"id":101,
+			 "name": "Abhishek",
+			 "address": {"city": "Patiala" , "state": "Punjab"},
+			 "hobbies": ["reading" , "coding"]};
+			document.write(personObj.id+"<br>");
+			document.write(personObj.name+"<br>");
+			document.write(personObj.address.city+", "+personObj.address.state+"<br>");
+			document.write(personObj.hobbies[1]+"<br>")
+			
+		
+		</script>
+	</body>
+</html>
