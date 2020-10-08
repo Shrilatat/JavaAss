@@ -1,69 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>HSBCWebApp</display-name>
- 
-  
-  <servlet>
-  <servlet-name>abc</servlet-name>
-  <servlet-class>com.trg.HelloWorldServlet</servlet-class>
-  </servlet>
-    
-    <servlet-mapping>
-    <servlet-name>abc</servlet-name>
-    <url-pattern>/helloWorld</url-pattern>
-    </servlet-mapping>
-    
-   <servlet>
-  <servlet-name>processname</servlet-name>
-  <servlet-class>com.trg.ProcessNameServlet</servlet-class>
-  </servlet>
-    
-    <servlet-mapping>
-    <servlet-name>processname</servlet-name>
-    <url-pattern>/processName</url-pattern>
-    </servlet-mapping>
-   
-   <servlet>
-  <servlet-name>addno</servlet-name>
-  <servlet-class>com.trg.AddNumbersServlet</servlet-class>
-  </servlet>
-    
-    <servlet-mapping>
-    <servlet-name>addno</servlet-name>
-    <url-pattern>/addno</url-pattern>
-    </servlet-mapping>
-    
-     <servlet>
-  <servlet-name>validate</servlet-name>
-  <servlet-class>com.trg.VerifyCredentialServlet</servlet-class>
-  </servlet>
-    
-    <servlet-mapping>
-    <servlet-name>validate</servlet-name>
-    <url-pattern>/validate</url-pattern>
-    </servlet-mapping>
-    
-     <servlet>
-  <servlet-name>display</servlet-name>
-  <servlet-class>com.trg.DisplayFormServlet</servlet-class>
-  </servlet>
-    
-    <servlet-mapping>
-    <servlet-name>display</servlet-name>
-    <url-pattern>/display</url-pattern>
-    </servlet-mapping>
-    
-     <servlet>
-  <servlet-name>bookcheck</servlet-name>
-  <servlet-class>com.trg.BookStoreServlet</servlet-class>
-  </servlet>
-    
-    <servlet-mapping>
-    <servlet-name>bookcheck</servlet-name>
-    <url-pattern>/bookcheck</url-pattern>
-    </servlet-mapping>
-    
- <welcome-file-list>
-  <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
+
+  <display-name>Archetype Created Web Application</display-name>
+
+<servlet>
+<servlet-name>app</servlet-name>
+<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>app</servlet-name>
+<url-pattern>*.obj</url-pattern>
+</servlet-mapping>
+
 </web-app>
