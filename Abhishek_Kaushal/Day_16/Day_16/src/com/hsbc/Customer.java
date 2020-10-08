@@ -11,7 +11,7 @@ public class Customer {
 	int custId;
 
 	@Autowired
-	Customer customerName;
+	CustomerName customerName;
 	
 	@Autowired
 	Address billingAddress;
@@ -30,11 +30,11 @@ public class Customer {
 		this.custId = custId;
 	}
 
-	public Customer getCustomerName() {
+	public CustomerName getCustomerName() {
 		return customerName;
 	}
 
-	public void setCustomer(Customer customerName) {
+	public void setCustomerName(CustomerName customerName) {
 		this.customerName = customerName;
 	}
 

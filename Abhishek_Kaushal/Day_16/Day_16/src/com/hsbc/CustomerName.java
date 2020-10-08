@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CustName {
+public class CustomerName {
 	
 	@Value("abhishek")
 	String firstname;
