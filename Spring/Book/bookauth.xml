@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="book" class="com.trg.eg.Book">
+	<property name="bookId" value="123"/>
+	<property name="price" value="1000"/>
+	<property name="bookTitle" value="Java"/>
+	<property name="publicationHouse" value="abc"/>
+	<property name="auth" ref="author"/>
+</bean>
+
+<bean id="author" class="com.trg.eg.Author">
+	<property name="age" value="28"/>
+	<property name="contactNumber" value="12345"/>
+	<property name="firstName" value="sid"/>
+	<property name="lastName" value="shah"/>
+	<property name="email" value="some@gmail"/>
+	<property name="address" value="pune"/>
+</bean>
+</beans>
