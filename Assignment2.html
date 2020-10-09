@@ -1,0 +1,51 @@
+<html>
+	
+	<body>
+	
+		<script>
+		
+			function validate(){
+
+				var cname = document.getElementById("name").value;
+				var orid = document.getElementById("oid").value;
+				var BD = document.getElementById("bdate").value;
+				var SD = document.getElementById("sdate").value;
+				var tot = document.getElementById("ototal").value;
+				
+				if(cname.length < 6)
+				{
+					alert("Enter proper details");
+					return false;
+				}
+			
+					document.getElementById("p1").innerHTML = orid;
+					document.getElementById("p2").innerHTML = name;
+					document.getElementById("p3").innerHTML = BD;
+					document.getElementById("p4").innerHTML = SD;
+					document.getElementById("p5").innerHTML = tot;
+				
+			}
+			 
+		</script>
+		
+		<form onsubmit = "validate()">
+		
+			OrederId : <input type = "text" id = "oid"> <br> <br>
+			Customer name :  <input type = "text" id = "name"> <br> <br>
+			Enter biling date :  <input type = "text" id = "bdate" > <br> <br>
+			Enter shipping date :  <input type = "text" id = "sdate" > <br> <br>
+			Order total :  <input type = "text" id = "ototal" > <br> <br>
+			
+			<input type = "submit"> <br> <br>
+			
+			Oreder id: <span id = "p1"></span> <br> <br>
+			Customer name: <span id = "p2"></span> <br> <br>
+			Billing date: <span id = "p3"></span> <br> <br>
+			Shipping date: <span id = "p4"></span> <br> <br>
+			Order total: <span id = "p5"></span> <br> <br>
+		
+		</form>
+
+	</body>
+
+</html>
