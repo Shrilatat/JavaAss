@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Details</title>
+</head>
+<body>
+<script type="text/javascript">
+	function ff(){
+	var1=document.getElementById("name").value;
+	var2=parseInt(document.getElementById("day").value);
+	var var3=document.getElementById("month").value;
+	var var4=document.getElementById("email").value;
+	var var5=document.getElementById("gender").value;
+	var6= parseInt(document.getElementById("number").value);
+	var var7=document.getElementById("foods").checked;
+	if(var6<101 && var6>0){
+	document.getElementById("pp1").innerHTML=("You entered"+"<br>"+"Name: "+var1+"<br>"+"Birth Date: "+var3+"-"+var2+"<br>"+"Email Address: "+var4+"<br>"+"Gender: "+var5+"<br>"+"Lucky Number: "+var6+"<br>"+"Favourite Food: "+var7);}
+	else{
+		alert("Enter valid lucky number between 0 to 100");
+	}
+}
+</script>
+
+<form>
+	Name: <input type="text" name="Name" id="name"><br><br>
+Birth Date: 
+<select id="day">
+
+<option>- Day -</option>
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+<input type="month" name="month" id="month"><br><br>
+Email Address: <input type="email" pattern="[a-zA-z0-9._]+@[a-z]+.[a-z]{2,}" name="email" id="email">
+<br><br>
+</form>
+<form>
+Gender: 
+  <input type="radio" name="gender" value="Male" id="gender">
+  <label for="male">Male</label>
+  <input type="radio" name="gender" value="Female" id="gender">
+  <label for="female">Female</label><br><br>
+ Lucky number: <input type="number" name="lucky" id="number"><br><br>
+ </form>
+ <form>
+ 	 Favorite Foods: <input type="checkbox" name="c1" id="foods" value="Pizza">Pizza
+<!--  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp --><input type="checkbox" name="c2" id="foods" value="Pasta">Pasta
+<!-- &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp -->
+ <input type="checkbox" name="c3" id="foods" value="Chinese">Chinese<br>
+ </form>
+ <input type="button" name="send data" value="Send Data" onclick="ff()">
+ <p id="pp1"></p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date form</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function f1(){
+			var1=parseInt(document.getElementById("order").value);
+			var2=document.getElementById("name").value;
+			var var3=document.getElementById("bil").value;
+			var var4=document.getElementById("ship").value;
+			var5=parseInt(document.getElementById("total").value);
+			if(var2.length>6 && var2.length<21){
+			if(var3<var4 && var1<999 && var1>0 ){
+			document.getElementById("pp").innerHTML=("Order ID: "+ var1+"<br>"+"Cust Name: "+var2+"<br>"+"Billing Date: "+var3+"<br>"+"Shipping Date: "+var4+"<br>"+"Order total: $"+var5);
+				}
+			else if(var3>var4 && var1<999 && var1>0){
+				alert("Invalid Dates");
+			}
+			else {
+				alert("Invalid ID");
+			}
+		}
+		else{
+			alert("Invalid Name");
+		}
+	}
+
+
+	</script>
+	<form>
+Order ID: <input type="number" name="Order" id="order" min="1" max="999"><br><br>
+Cust Name: <input type="text" name="Name" minlength="7" maxlength="20" id="name">
+<br><br>
+Enter billing date: <input type="date" name="BillingDate" value="26-09-2020" id="bil">
+<br><br>
+Enter shipping date: <input type="date" name="ShippingDate" value="30-09-2020" id="ship">
+<br><br>
+Order total: <input type="number" name="total" id="total">
+<br><br>
+<input type="button" name="display" value="display" onclick="f1()">
+
+<p id="pp"></p>
+</form>
+</body>
+</html>

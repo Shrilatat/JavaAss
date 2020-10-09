@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="cc" class="spring.CurrencyConv" autowire="byType"/>
+	
+<bean id="es" class="spring.ExchangeService"/>
+
+<bean id="cb" class="spring.Currencybean">
+<property name="currencies">
+<list>
+	<value>Dollars</value>
+	<value>Yen</value>
+	<value>Dinar</value>
+	<value>Euro</value>
+</list>
+</property>
+</bean>
+</beans>
