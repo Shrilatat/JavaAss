@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="ba" class="com.trg.BookAuthor">
+ <property name="id" value="101" />
+ <property name="price" value="400" />
+ <property name="author"  >
+ <ref bean="ath" />
+ </property>
+ <property name="title" value="Core Java" />
+ <property name="pub" value="heeee" />BookAuthorClient.java
+ <property name="isbn" value="3838" />
+</bean>
+
+<bean id="ath" class="com.trg.Author">
+<constructor-arg index="0"><value>abhinav</value> </constructor-arg>
+<constructor-arg index="1"><value>sri</value></constructor-arg>
+<constructor-arg index="2"><value>33</value></constructor-arg>
+<constructor-arg index="3"><value>abhi@gmail</value></constructor-arg>
+<constructor-arg index="4"><value>98989</value></constructor-arg>
+<constructor-arg index="5"><value>67/11add</value></constructor-arg>
+</bean>
+</beans>

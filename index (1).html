@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Form Data</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First name:  </label>
+        <input type="text" id="fname" name="fname" style="margin-left: 10%" value=""><br><br>
+        
+        <label for="dob">Birth Date:   </label>
+        <input type="date" id="dob" name="dob" style="margin-left: 10%" value=""><br><br>
+        
+        <label for="email">Email Address:   </label>
+        <input type="email" id="email" style="margin-left: 8%" name="email" value="">
+        <label for="email">(Use format name@company.com)</label><br><br>
+        
+        <label for="gender">Gender:  </label>
+        <input type="radio" id="male" style="margin-left: 11%" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" style="margin-left: 15%" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+        
+        <label for="lno">Lucky Number:  </label>
+        <input type="number" id="lno" style="margin-left: 8%" name="lno" value="">
+        <label for="lno">(A number between 1 and 100)</label><br><br>
+        
+        <input type="checkbox" id="pizza" name="pizza" style="margin-left: 15%" value="Pizza">
+        <label for="pizza">Pizza</label><br>
+        <label for="food">Favourite Foods:  </label>
+        <input type="checkbox" id="pasta" name="pasta" style="margin-left: 6.6%"value="Pasta">
+        <label for="Pasta">Pasta</label><br>
+        <input type="checkbox" id="cheese" name="cheese" style="margin-left: 15%" value="Cheese">
+        <label for="cheese">Cheese</label><br><br>
+        <input type="submit" onclick="myFunction(event)" value="Submit">
+    </form>
+
+    <h3>You Entered: </h3>
+    <p id="fnameres">Name: </p>
+	<p id="dateofbirth">Birth Date: </p>
+	<p id="emailId">Email Address</p>
+    <p id="genderres">Gender: </p>
+    <p id="checkres">Favourite Foods: </p>
+    <script>
+        function myFunction(e) {
+            e.preventDefault();
+
+            // Name
+            let fname = document.getElementById("fname").value;
+            document.getElementById("fnameres").innerHTML = 'Name: ' + fname;
+			
+			//DOB
+				let dob=document.getElementById("dob").value;
+			document.getElementById("dateofbirth").innerHTML='Birth Date: '+dob;
+			
+			//email
+			let email=document.getElementById("email").value;
+			document.getElementById("emailId").innerHTML='Email Address: '+email;
+            
+            // Gender
+            let genderRes = "Gender:";
+            let male = document.getElementById("male").checked;
+            let female = document.getElementById("female").checked;
+
+            if(male)
+                genderRes += ' Male';
+            
+            if(female)
+                genderRes += ' Female';
+
+            document.getElementById("genderres").innerHTML = genderRes;
+            
+            // Favourite Food
+            let checkRes = "Favourite Foods:";
+            let pizza = document.getElementById("pizza").checked;
+            let pasta = document.getElementById("pasta").checked;
+            let cheese = document.getElementById("cheese").checked;
+            
+            if(pizza)
+                checkRes += ' Pizza';
+            
+            if(pasta)
+                checkRes += ' Pasta';
+            
+            if(cheese)
+                checkRes += ' Cheese';
+
+            document.getElementById("checkres").innerHTML = checkRes;
+        }
+    </script>
+</body>
+</html>
