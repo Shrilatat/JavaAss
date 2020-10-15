@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        function display(){
+            var n=document.getElementById("name").value;
+            var oid=document.getElementById("i").value
+            var ot=document.getElementById("tot").value
+            i1=document.getElementById("bd");
+            i2=document.getElementById("sd");
+
+            date1=i1.valueAsDate;
+            date2=i2.valueAsDate;
+
+            if(date1>date2)
+            {
+                document.getElementById("v2").innerHTML=" Billing date should be smaller";
+
+            }
+            if(date1<date2)
+            {
+                document.getElementById("v2").innerHTML="";
+
+            }
+            if(n.length<5)
+            {
+                document.getElementById("v1").innerHTML=" Cust Name must have greater than 5 characters";
+            }   
+            if(n.length>5)
+            {
+                document.getElementById("v1").innerHTML="";
+            }
+            if(n.length<5 || date1>date2)
+                {
+                    document.getElementById("p1").innerHTML="";
+                    return false;
+                }
+            
+            if(n.length>5 && date1<date2)
+            {
+                document.getElementById("p1").innerHTML="Order Id : "+oid+"<br>Cust Name : "+n+"<br>Billing Date : "+
+                i1.value+"<br>Shipping Date : "+i2.value+"<br>Order Total : $"+ot;
+                return true;
+            }
+
+        }
+    </script>
+    <form onsubmit="return display()">
+        Order ID : <input type="text" id="i" required><br><br>
+        Cust Name : <input type="text" id="name" required><span id="v1" style="color: red;"></span><br><br>
+        Enter Billing Date : <input type="date" id="bd" required><span id="v2" style="color: red;"></span><br><br>
+        Enter Shipping Date : <input type="date" id="sd" required><br><br>
+        Order Total : <input type="text" id="tot" required><br><br>
+        <input type="button" value="display" onclick="display()"><br><br> 
+    </form>
+    <p id="p1"></p>
+   
+</body>
+</html>
