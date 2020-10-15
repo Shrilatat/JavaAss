@@ -1,0 +1,36 @@
+package com.hsbc.book;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BookManager {
+	
+	List<Book> books = new ArrayList<>();
+	
+	public void setBooks(List<Book> books) {
+		this.books = books;
+	}
+
+	public List<Book> getBooks(){
+		
+		return books;
+	}
+	
+	public List<Book> getBooksByAuthorName(String name){
+		
+		List<Book> b1 = new ArrayList<>();
+		for (Book b : books) {
+			if (b.getAuthor().getLname().equals(name))
+				b1.add(b);
+		}
+		return b1;
+	}
+	
+	public Book getBookWithId(int id) {
+		for (Book b : books) {
+			if (b.getBookID() == id)
+				return b;
+		}
+		return null;
+	}
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="author1" class="com.hsbc.book.Author" >
+	<property name="fname" value="Adam" />
+	<property name="lname" value="Kanetkar" />
+	<property name="address" value="Australia" />
+	<property name="age" value="42" />
+</bean>
+
+<bean id="book1" class="com.hsbc.book.Book">
+	<property name="bookID" value="101" />
+	<property name="title" value="Effective Java" />
+	<property name="author" ref="author1" />
+	<property name="publication" value="Oreily" />
+	<property name="price" value="1000" />
+</bean>
+
+<bean id="author2" class="com.hsbc.book.Author" >
+	<property name="fname" value="Adam" />
+	<property name="lname" value="Smith" />
+	<property name="address" value="Australia" />
+	<property name="age" value="42" />
+</bean>
+
+<bean id="book2" class="com.hsbc.book.Book">
+	<property name="bookID" value="102" />
+	<property name="title" value="Head First Java" />
+	<property name="author" ref="author2" />
+	<property name="publication" value="DBS" />
+	<property name="price" value="1000" />
+</bean>
+
+<bean id="author3" class="com.hsbc.book.Author" >
+	<property name="fname" value="Adam" />
+	<property name="lname" value="Kanetkar" />
+	<property name="address" value="Australia" />
+	<property name="age" value="42" />
+</bean>
+
+<bean id="book3" class="com.hsbc.book.Book">
+	<property name="bookID" value="103" />
+	<property name="title" value="Spring in Action" />
+	<property name="author" ref="author3" />
+	<property name="publication" value="Sybage" />
+	<property name="price" value="1000" />
+</bean>
+
+<bean id="manager" class="com.hsbc.book.BookManager">
+  <property name="books">
+  <list>
+  <ref bean="book1"/>
+  <ref bean="book2"/>
+  <ref bean="book3"/>
+  </list>
+  </property>
+  </bean>
+
+</beans>

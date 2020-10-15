@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            function f1(){
+                var r = parseInt(window.document.getElementById("radius").value);
+                document.getElementById("s1").innerHTML = Math.PI*r*r;
+                document.getElementById("s2").innerHTML = 2*Math.PI*r;
+            }
+        </script>
+        
+        <form>
+            Enter Radius : <input type="text" id="radius"><br><br>
+            <input type="button" value="Display" onclick="f1()"><br><br>
+            The area is <span id="s1"></span><br>
+            The circumference is <span id="s2"></span>
+        </form>
+    </body>
+</html>

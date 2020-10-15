@@ -1,0 +1,29 @@
+<html>
+    <body>
+        
+        <script>
+            function f1(){
+                document.getElementById("s1").innerHTML = document.getElementById("orderId").value;
+                document.getElementById("s2").innerHTML = document.getElementById("custName").value;
+                document.getElementById("s3").innerHTML = document.getElementById("billDate").value;
+                document.getElementById("s4").innerHTML = document.getElementById("shipDate").value;
+                document.getElementById("s5").innerHTML = document.getElementById("total").value;
+                
+            }
+        </script>
+        
+        <form>
+            Order ID : <input type="text" id="orderId"><br><br>
+            Cust Name : <input type="text" id="custName"><br><br>
+            Enter Billing Date : <input type="date" id="billDate"><br><br>
+            Enter Shipping Date : <input type="date" id="shipDate"><br><br>
+            Order Total : <input type="text" id="total"><br><br>
+            <input type="button" value="Display" onclick="f1()"><br><br>
+            Order ID : <span id="s1"></span><br>
+            Cust Name : <span id="s2"></span><br>
+            Billing Date : <span id="s3"></span><br>
+            Shipping Date : <span id="s4"></span><br>
+            Order Total : <span id="s5"></span><br>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User Input</title>
+</head>
+<body>
+<h3>User Input Form</h3>
+        <form method="get" action="input">
+            Name : <input type="text" name="name"><br><br>
+            Password : <input type="password" name="password"><br><br>
+            Gender : <input type="radio" name="gender" value="Male">Male
+                    <input type="radio" name="gender" value="Female">Female
+            <br><br>
+            Age : <select size="1" name="age">
+                <option>0-12</option>
+                <option>13-18</option>
+                <option>19-40</option>
+                <option>Greater than 40</option>
+            </select>
+            <br><br>
+            Languages : <input type="checkbox" name="lang" value="HTML">HTML
+                    <input type="checkbox" name="lang" value="CSS">CSS
+                    <input type="checkbox" name="lang" value="Angular">Angular
+                    <input type="checkbox" name="lang" value="JSON">JSON
+                    <input type="checkbox" name="lang" value="Node.js">Node.js
+            <br><br>
+            Instruction  :  <textarea rows="5" cols="5" name="instruction"></textarea><br><br>
+            <input type="submit" value="Register">
+            <input type="reset">
+        </form>
+</body>
+</html>
