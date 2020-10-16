@@ -1,0 +1,37 @@
+<h1>Employee</h1><br><br>
+Click on any button:<br><br>
+
+<input type="button" value="Display in a Table" (click)="tableDisplay($event)">
+<input type="button" value="Display in a list" (click)="listDisplay($event)">
+<input type="button" value="Clear screen" (click)="clearDisplay($event)">
+
+<div id="table1" style="visibility: hidden;">
+  <table border="1">
+    <tr>
+      <th>EmpNo</th>
+      <th>EmpName</th>
+      <th>Salary</th>
+      <th>Desg</th>
+      <th>Bonus</th>
+      <th>Total</th>
+    </tr>
+
+    <tr *ngFor="let employee of emp">
+      <td>{{employee.empno}}</td>
+      <td>{{employee.ename}}</td>
+      <td>{{employee.salary}}</td>
+      <td>{{employee.desg}}</td>
+      <td>{{(employee.salary)/10}}</td>
+      <td>{{(employee.salary)*1.1}}</td>
+    </tr>
+  </table>
+</div>
+
+<div id="list1" style="visibility: hidden;">
+  <br><br>EmpNo---->Ename---->Salary---->Desg---->Bonus---->Total<br>
+ 
+
+     <div *ngFor="let e of emp">
+      {{e.empno}}---->{{e.ename}}---->{{e.salary}}---->{{e.desg}}---->{{e.salary/10}}---->{{e.salary*1.1}}
+    </div>
+</div>

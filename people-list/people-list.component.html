@@ -1,0 +1,12 @@
+<h1>
+  People-List
+</h1>
+<table border="1" >
+      <tr><th>Name</th><th>Age</th><th>Gender</th></tr>
+      <tr *ngFor="let item of getpeople();">
+         <td>{{ item.name }}</td>
+         <td>{{ item.age }}</td>
+         <td>{{ item.gender }}</td>
+      </tr>
+   </table>
+  
