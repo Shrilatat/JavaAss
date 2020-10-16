@@ -1,0 +1,17 @@
+<table border="1" style="border-collapse: collapsed;">
+  <tr><th>Name</th><th>Age</th> <th>Gender</th></tr>
+  <tr  *ngFor="let p of people">
+    <td>{{p.name}}</td>
+    <td>{{p.age}}</td>
+    <td>{{p.gender}}</td>
+  </tr>
+</table>
+<br><br>
+<table border="1" style="border-collapse: collapsed;">
+  <tr><th>Name</th><th>Age</th> <th>Gender</th></tr>
+  <tr  *ngFor="let p of getAllPeople()">
+    <td>{{p.name}}</td>
+    <td>{{p.age}}</td>
+    <td>{{p.gender}}</td>
+  </tr>
+</table>

@@ -1,0 +1,28 @@
+<input type="button" (click)="getEmp()" value="display table">
+<input type="button" (click)="getEmplist()" value="display list">
+<input type="button" (click)="clear()" value="clear list">
+<div>
+<div *ngIf="emp">
+  <table border="1" style="border-collapse: collapsed;">
+    <tr>
+      <td>empno</td>
+      <td>empname</td>
+      <td>sal</td>
+      <td>desig</td>
+    </tr>
+    <tr *ngFor="let p of getEmp()">
+      <td>{{p.empno}}</td>
+      <td>{{p.empname}}</td>
+      <td>{{p.sal}}</td>
+      <td>{{p.desig}}</td>
+    </tr>
+  </table>
+</div>
+<div *ngIf="emplist">
+  <p *ngFor="let p of getEmplist()">
+    {{p.empno}},{{p.empname}},{{p.sal}},{{p.desig}}<br>
+  </p>   
+  <div *ngIf="c">
+
+  </div>
+</div>
