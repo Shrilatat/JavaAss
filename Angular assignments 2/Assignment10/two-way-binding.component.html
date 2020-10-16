@@ -1,0 +1,17 @@
+<p>
+  Question 4
+</p>
+Enter Order ID: <input type="text" [(ngModel)]="orderId"><br><br>
+Enter Customer Name: <input type="text" [(ngModel)]="customerName"><br><br>
+Enter Billing Date: <input type="date" [(ngModel)]="billDate"><br><br>
+Enter Shipping date: <input type="date" [(ngModel)]="shipDate"><br><br>
+Enter Order Total: <input type="text" [(ngModel)]="total"><br><br>
+<input type="button" value="display" (click)="onClick()">
+
+<div *ngIf="isClicked">
+    Order ID: {{orderId}}<br><br>
+    Customer Name: {{customerName}}<br><br>
+    Billing Date: {{billDate}}<br><br>
+    Shipping date: {{shipDate}}<br><br>
+    Order Total: {{total}}<br><br>
+</div>
