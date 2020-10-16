@@ -1,0 +1,16 @@
+Order Id :<input type="text" [(ngModel)]="orderId"> <br>
+Customer Name :<input type="text" [(ngModel)]="custName"> <br>
+Billing Date :<input type="date" [(ngModel)]="billingDate"> <br>
+Shipping Date :<input type="date"[(ngModel)]="shippingDate"> <br>
+Order Total :<input type="text" [(ngModel)]="orderTotal"> <br>
+<input type="button" on-click="displayDetails()" value="Display">
+
+<div *ngIf="display">
+  <p> Order Id : {{orderId}}</p><br>
+  <p> Customer Name : {{custName}}</p><br>
+  <p> Billing Date : {{billingDate}}</p><br>
+  <p> Shipping Date : {{shippingDate}}</p><br>
+  <p> Order Total : {{orderTotal}}</p><br>
+</div>
+
+
