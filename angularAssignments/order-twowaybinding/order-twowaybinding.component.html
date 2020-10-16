@@ -1,0 +1,15 @@
+
+<fieldset>
+  Order Id: <input type="text" [(ngModel)]="orderid"><br>
+  Cust name: <input type="text" [(ngModel)]="custName"><br>
+  Enter billing date: <input type="text" [(ngModel)]="billDate"><br>
+  Enter Shipping date: <input type="text" [(ngModel)]="shippingDate"><br>
+  Order Total: <input type="text" [(ngModel)]="total"><br>
+  <input type="button" (click)="Display(orderid,custName,billDate,shippingDate,total)" value="Display"><br>
+
+  Order Id:{{orderid}}<br>
+  Cust name:{{custName}}<br>
+  Billing date:{{billDate}}<br>
+  Shipping date:{{shippingDate}}<br>
+  Order Total:{{total}}<br>
+</fieldset>
