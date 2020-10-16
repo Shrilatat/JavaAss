@@ -1,0 +1,10 @@
+<input type="button" (click)="getAllPeople()" value="click to display">
+
+<table>
+  <th>Name</th><th>Age</th><th>Gender</th>
+  <tr *ngFor="let person of myCrowd">
+    <td>{{person.name}}</td>
+    <td>{{person.age}}</td>
+    <td>{{person.gender}}</td>
+  </tr>
+</table>

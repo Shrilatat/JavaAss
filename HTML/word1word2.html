@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            var n1 = parseInt(document.getElementById("t1").value);
+            var n2 = parseInt(document.getElementById("t1").value);
+            document.write("sum :" + (n1 + n2));
+        }
+    </script>
+    <form method="get">
+        <div>
+            No1
+            <input type="text" name="t1" id="t1">
+        </div>
+        <div>
+            No2
+            <input type="text" name="t2" id="t2">
+        </div>
+        <div>
+            <input type="submit" value = "add" onClick="f1()">
+        </div>  
+        <div>
+            Result:
+            <input type="text" id="res">
+        </div>
+    </form>
+</body>
+</html>

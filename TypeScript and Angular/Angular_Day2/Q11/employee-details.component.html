@@ -1,0 +1,31 @@
+<input type="button" on-click="displayTable()" value="TABLE">
+<input type="button" on-click="displayList()" value="LIST">
+<input type="button" on-click="clearAll()" value="CLEAR">
+
+<div *ngIf="showTable">
+  <table>
+    <th>Employee No</th> <th>Employee name </th> <th>Salary</th> <th>Designation</th><th>Bonus</th><th>Total Salary</th>
+      <tr *ngFor="let person of displayTable()">
+        <td>{{person.empNo}}</td>
+        <td>{{person.eName}}</td>
+        <td>{{person.salary}}</td>
+        <td>{{person.designation}}</td>
+        <td>{{0.1  * person.salary}}</td>
+        <td>{{1.1 * person.salary}}</td>
+      </tr>
+  </table>
+</div>
+
+<div *ngIf="showList">
+  <li *ngFor="let person of displayList()">
+    <ul>
+      {{person.empNo}} &nbsp;
+      {{person.eName}} &nbsp;
+      {{person.salary}} &nbsp;
+      {{person.designation}} &nbsp;
+      {{ 0.1 * person.salary}} &nbsp;
+      {{ 1.1 * person.salary}} &nbsp;
+    </ul>
+  </li>
+</div>
+

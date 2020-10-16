@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean id="book1" class="com.trg.Book">
+
+ <constructor-arg index="0"><value>123</value></constructor-arg>
+ <constructor-arg index="1"><value>Python Book</value></constructor-arg>
+ <constructor-arg index="2"><value>Random Author</value></constructor-arg>
+ <constructor-arg index="3"><value>12345</value></constructor-arg>
+ <constructor-arg index="4"><value>Windows</value></constructor-arg>
+ </bean>
+</beans>

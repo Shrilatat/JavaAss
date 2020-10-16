@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>HSBCWebApplication</display-name>
+
+	<servlet>
+		<servlet-name>abc</servlet-name>
+		<servlet-class>firstservlet.HelloWorldServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>abc</servlet-name>
+		<url-pattern>/helloWorld</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>processname</servlet-name>
+		<servlet-class>firstservlet.ProcessNameServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>processname</servlet-name>
+		<url-pattern>/processName</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>addNum</servlet-name>
+		<servlet-class>firstservlet.AddNumbersServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>addNum</servlet-name>
+		<url-pattern>/addNum</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>simpleInterest</servlet-name>
+		<servlet-class>firstservlet.SimpleInterestServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>simpleInterest</servlet-name>
+		<url-pattern>/simpleInterest</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>userLogin</servlet-name>
+		<servlet-class>firstservlet.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>userLogin</servlet-name>
+		<url-pattern>/userLogin</url-pattern>
+	</servlet-mapping>
+	
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

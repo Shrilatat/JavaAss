@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("Hello World");
+        alert("Hello World");
+        console.log("Hello again World")
+
+        for(let i = 1; i<11;i++){
+            console.log(i);
+        }
+
+        for(let i = 1; i<11;i++){
+            document.write(i +"<br>");
+        }
+
+        var a = 1;
+        var b = 2;
+        var c = 3;
+
+        var greatest =  a > b ? ( a > c ? a : c) : (b > c ? b : c) ;
+        document.write("Greatest number is "+ greatest);
+
+        var x = 3;
+        var y = 4;
+        var z = 5; 
+        var greatest1;
+
+        if( x > y){
+            if( x > z){
+                greatest = x;
+            } 
+        } else if(y > z){
+            if(z > x){
+                greatest = y;
+            }
+        } else{
+            greatest = z;
+        }
+        document.write("Greatest number is "+ greatest1);
+    </script>
+
+    <script src="myjs.js"></script>
+    <h3>This is after executing the script</h3>
+</body>
+</html>
