@@ -1,0 +1,29 @@
+<table style="color: orangered;">
+  <tr><td>Enter Order id: </td>
+    <td><input type="number" [(ngModel)]="orderid"></td></tr>
+    <br><br>
+  <tr><td>Enter Customer Name: </td>
+    <td><input type="text" [(ngModel)]="customername"></td></tr>
+    <br><br>
+  <tr><td>Enter Billing Date: </td>
+    <td><input type="date" [(ngModel)]="billdate"></td></tr>
+    <br><br>
+  <tr><td>Enter Shipping date: </td>
+    <td><input type="date" [(ngModel)]="shipdate"></td></tr>
+    <br><br>
+  <tr><td>Enter Order Total: </td>
+    <td><input type="number" [(ngModel)]="ordertotal"></td></tr>
+    <br><br>
+</table>
+
+<input type="button" value="Show" (click)="onClick()">
+
+
+
+<div *ngIf="clicked" style="color: mediumblue;">
+    Order ID: {{orderid}}<br>
+    Cust Name: {{customername}}<br>
+    Billing Date: {{billdate}}<br>
+    Shipping date: {{shipdate}}<br>
+    Order Total: {{ordertotal}}<br>
+</div>
