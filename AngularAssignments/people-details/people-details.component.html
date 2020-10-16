@@ -1,0 +1,19 @@
+<h1>JSON used =></h1>
+<table border="5" style="border-collapse:collapsed; color: mediumblue;">
+  <tr><th>NAME</th><th>AGE</th><th>GENDER</th></tr>
+    <tr *ngFor="let person1 of people">
+       <td>{{ person1.name }}</td>
+       <td>{{ person1.age }}</td>
+       <td>{{ person1.gender }}</td>
+    </tr>
+ </table>
+
+<h1>modeule.ts used =></h1>
+<table border="5" style="border-collapse:collapsed; color: mediumblue;">
+    <tr><th>NAME</th><th>AGE</th><th>GENDER</th></tr>
+    <tr *ngFor="let person2 of getAllPeople()">
+       <td>{{ person2.name }}</td>
+       <td>{{ person2.age }}</td>
+       <td>{{ person2.gender }}</td>
+    </tr>
+ </table>

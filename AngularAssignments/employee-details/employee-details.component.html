@@ -1,0 +1,30 @@
+<input type="button" value="DISPLAY TABLE !" (click)="getTable()">
+<input type="button" value="DISPLAY LIST !" (click)="getList()" >
+<input type="button" value="CLEAR ALL !" (click)="clearData()" >
+
+<div *ngIf="tablecheck">
+    <table border="5" style="border-collapse:collapsed; color: mediumblue;">
+        <tr><th>EMPLOYEE NO.</th><th>EMPLOYEE NAME</th><th>SALARY</th><th>DESIGNATION</th><th>BONUS</th><th>TOTAL</th></tr>
+        <tr *ngFor="let person1 of getTable()">
+           <td>{{ person1.empno }}</td>
+           <td>{{ person1.ename }}</td>
+           <td>{{ person1.sal }}</td>
+           <td>{{ person1.desig }}</td>
+           <td>{{ 0.1*person1.sal }}</td>
+           <td>{{ 1.1*person1.sal }}</td>
+        </tr>
+     </table>
+</div>
+
+
+<div *ngIf="listcheck">
+    <li *ngFor="let person2 of getList() ">
+        <ul><b>Employee number is =>{{ person2.empno }}<br>
+           Employee name is => {{ person2.ename }}<br>
+            Base Salary is => {{ person2.sal }}<br>
+             Designation is => {{ person2.desig }}<br>
+              Bonus is => {{ 0.1*person2.sal }}<br>
+              Total Salary is => {{ 1.1*person2.sal }}<br></b>
+        </ul>
+    </li>
+</div>
