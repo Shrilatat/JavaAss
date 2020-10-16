@@ -1,0 +1,22 @@
+<fieldset>
+<br>
+    <h2>{{titlelabel}}</h2>
+<h4>
+  <ul><li *ngFor="let n of names">{{n}}</li></ul>
+</h4>
+Player Name:<input name="t1" #player><br>
+<input type="submit" value="add player" (click)="addName(player.value)">
+<input type="submit" value="del player" (click)="delName(player.value)">
+<input type="submit" value="del players" (click)="delAllNames()">
+</fieldset>
+<br><br>
+Enter name to see value on console: <input type="text" value="Shrilata T" (click)="showEvent($event)">
+<br>
+Enter value in text to see value : <input type="text" (keyup)="showEvent($event)">
+<br>
+Click on button to see target : <input type="button" value="A button"(click)="showEvent($event)">
+<br>
+<h2 style="color:red">Move mouse over "Div Element" to show/hide it </h2>
+
+<h2><div (mouseover)="hide($event)" 
+         (mouseout)="show($event)">Div element</div></h2>
