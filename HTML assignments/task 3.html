@@ -1,0 +1,93 @@
+<html>
+
+	<head>
+		<title> Personal Details </title>
+	</head>
+	
+<body bgcolor="lightgrey">
+
+	<script>
+		function display()
+    {
+        var name=document.getElementById("name1").value;
+        var email=document.getElementById("mail").value;
+        var bday=document.getElementById("bday").value;
+        var lucky=document.getElementById("lucky").value;
+        var gender=document.getElementsByName("gender").value;
+
+        if (document.getElementById('Female').checked) 
+        var gen = document.getElementById('Female').value;
+
+        if (document.getElementById('Male').checked) 
+        var gen = document.getElementById('Male').value;
+
+        if(lucky<1 || lucky>100)
+			alert("Not in range");
+        
+        document.getElementById("p1").innerHTML="You Entered";
+        document.getElementById("p2").innerHTML="Name: "+name;
+        document.getElementById("p3").innerHTML="Birth Date: "+bday;
+        document.getElementById("p4").innerHTML="Email Address: "+email;
+        document.getElementById("p5").innerHTML="Gender: "+gen;
+        document.getElementById("p6").innerHTML="Lucky Number: "+lucky;
+        document.getElementById("p7").innerHTML="Favorite foods: "+getNames();
+    }
+
+     function getNames()
+     {
+         var checks=document.getElementsByClassName("food");
+         var str='';
+          for(var i=0;i<3;i++)
+          {
+              if(checks[i].checked==true)
+              str+=checks[i].value+" ";
+          }
+          return str;
+     }
+	
+	</script>
+	  
+</body>
+
+	<form>
+	<table>
+        <tr><td>Name:</td>
+		<td><input type="text" id="name1"></td></tr><br><br>
+        
+        <tr><td>BirthDay:</td>
+		<td><input type="date" id="bday"></td></tr><br><br>
+
+        <tr><td>Email Address:</td>
+		<td><input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="mail">(Use format name@company.com)</td></tr><br><br>
+            
+        
+        <tr><td>Gender:<td>
+		<input type="radio" id="Female" name="gender" value="Female"><label for="Female">Female</label>
+		<input type="radio" id="Male" name="gender" value="Male"><label for="Male">Male</label></tr><br><br>
+
+
+        <tr><td>Lucky number:</td>
+		<td><input type="text" id="lucky"><td>(A number between 1 and 100)</td></tr><br><br>
+         
+		<tr><td>Favorita Foods:
+        <input type="checkbox" class="food" value="Pizza"><label for="vehicle1"> Pizza </label><br>
+        <input type="checkbox" class="food" value="Pasta"><label for="vehicle2"> Pasta </label><br>
+        <input type="checkbox" class="food" value="Chineese"><label for="vehicle3"> Chinese </label></td></tr><br><br>
+         
+	</table>
+	
+		<br><br>
+		
+        <input type="button" value="Send Data"onclick="display()">
+
+	
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+        <p id="p5"></p>
+        <p id="p6"></p>
+        <p id="p7"></p>
+
+    </form>
+</html>

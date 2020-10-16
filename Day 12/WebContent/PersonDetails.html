@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Person Details</title>
+</head>
+<body bgcolor="lightgrey">
+	<h1>Contact Manager</h1>
+	<hr>
+	<form method="get" action="pds">
+		<table>
+			<tr>
+				<td>Username :</td>
+				<td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td>Password :</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td>Email :</td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td><label for="gender">Gender:</label>
+				<td><select name="gender" id="gender">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="other">Other</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Age :</td>
+				<td><input type="text" name="age"></td>
+			</tr>
+			<tr>
+				<td>Address :</td>
+				<td><textarea rows="4" cols="50" name="address"></textarea></td>
+			</tr>
+			<tr>
+				<td>Contact number :</td>
+				<td><input type="text" name="phone"></td>
+			</tr>
+		</table>
+		<hr>
+		<input type="submit" value="Submit Details">
+		<input type="reset" value="Reset">
+	</form>
+	<hr>
+</body>
+</html>

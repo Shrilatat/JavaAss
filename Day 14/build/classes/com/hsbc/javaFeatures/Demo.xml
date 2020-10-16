@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Employees>
+	
+	<Employee>
+		
+		<empNo>7369</empNo>
+		<empName>Smith</empName>
+		<job>Clerk</job>
+		<mgr>7902</mgr>
+		<hireDate>17-Dec-80</hireDate>
+		<salary>1100</salary>
+		<comm>200</comm>
+		<deptNo>20</deptNo>
+	
+	</Employee>
+	
+	<Employee>
+		
+		<empNo>799</empNo>
+		<empName>Allen</empName>
+		<job>Salesman</job>
+		<mgr>7698</mgr>
+		<hireDate>20-Feb-81</hireDate>
+		<salary>1600</salary>
+		<comm>24820</comm>
+		<deptNo>30</deptNo>
+	
+	</Employee>
+	
+	<Employee>
+		
+		<empNo>7521</empNo>
+		<empName>Ward</empName>
+		<job>Salesman</job>
+		<mgr>7698</mgr>
+		<hireDate>22-Feb-81</hireDate>
+		<salary>1375</salary>
+		<comm>19700</comm>
+		<deptNo>30</deptNo>
+	
+	</Employee>
+	
+	<Employee>
+		
+		<empNo>7566</empNo>
+		<empName>Jones</empName>
+		<job>Manager</job>
+		<mgr>7839</mgr>
+		<hireDate>02-Apr-81</hireDate>
+		<salary>3175</salary>
+		<comm>200</comm>
+		<deptNo>20</deptNo>
+	
+	</Employee>
+
+</Employees>

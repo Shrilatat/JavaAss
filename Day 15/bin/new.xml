@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bb" class="com.hsbc.spring.BookBean">
+	<property name="authorbean" ref="ab"/>
+	<property name="bookid" value="111"/>
+	<property name="bookTitle" value="Java"/>
+	<property name="isbnno" value="99999"/>
+	<property name="publication" value="Dhanpat Rai"/>
+	</bean>
+	
+	<bean id="ab" class="com.hsbc.spring.AuthorBean">
+	<property name="firstName" value="Sumita"/>
+	<property name="lastName" value="Arora"/>
+	<property name="age" value="50"/>
+	<property name="email" value="sumitaarora@gmail.com"/>
+	<property name="contact" value="9876543212"/>
+	<property name="address" value="Mumbai, Maharashtra"/>
+	</bean>
+	
+</beans>

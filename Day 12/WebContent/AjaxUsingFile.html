@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script language="javascript" type="text/javascript">
+	
+	function btngetsample_onclick() {
+		xmlhttp = new XMLHttpRequest();
+		if (xmlhttp) {
+			xmlhttp.open("GET", "Sample.txt", true);
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4) {
+					if (xmlhttp.status == 200) {
+						//alert("Last modified on: " + xmlhttp.getResponseHeader("Last-Modified"));
+						document.getElementById("lblresult").innerHTML = xmlhttp.responseText;
+					} else
+						alert("oops...somethings wrong!");
+				}
+			}
+
+			xmlhttp.send(null);
+		} else
+			window.alert('No AJAX Support');
+	}
+</script>
+
+</head>
+<body>
+	<input type="button" onclick="btngetsample_onclick()" value="Getresult" />
+	<div id="lblresult"></div>
+</body>
+</html>

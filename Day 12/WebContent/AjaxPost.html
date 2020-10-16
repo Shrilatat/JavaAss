@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+<script language="javascript" type="text/javascript">
+	var xmlhttp;
+	
+	function btnadd_onclick() {
+		getHTTPRequestObject();
+		if (xmlhttp) {
+			xmlhttp.open("POST", "AddNos.jsp", true);
+			xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4) {
+					if (xmlhttp.status == 200) {
+						var d = document.getElementById("lblresult");
+						d.innerHTML = xmlhttp.responseText;
+					} else
+						alert("oops...somethings wrong!");
+				}
+			}
+			
+			xmlhttp.send("tno1=100&tno2=200");
+		} else
+			window.alert('No AJAX Support');
+	}
+	
+	function getHTTPRequestObject() {
+		try {
+			// Try IE implementation now
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		} catch (E) {
+			xmlhttp = false;
+		}
+		if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+			// We must be using a Mozilla-based browser
+			// so create a native request object now
+			xmlhttp = new XMLHttpRequest();
+		}
+	}
+</script>
+
+</head>
+<body>
+	<input type="button" onclick="btnadd_onclick()" value="Getresult" />
+	<div id="lblresult"></div>
+</body>
+</html>
