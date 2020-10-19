@@ -1,0 +1,85 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+	function display()
+	{
+		document.getElementById("p1").innerHTML=document.getElementById("name").value;
+		document.getElementById("p2").innerHTML=document.getElementById("dte").value;
+		document.getElementById("p3").innerHTML=document.getElementById("mail").value;
+		document.getElementById("p4").innerHTML=document.getElementById("gen").value;
+		document.getElementById("p5").innerHTML=document.getElementById("lucNum").value;
+		//alert("in1");
+		var selItems=document.getElementByName("favFood");
+			
+			document.getElementById("p6").innerHTML=selItems[0].value;
+			document.getElementById("p7").innerHTML=selItems[1].value;
+
+			//document.write(selItems[i].value);
+		
+		//alert("in2");
+		
+	}
+</script>
+<form>
+	<table>
+	<tr>
+	<td>Name</td>
+	<td><input type=text id="name" ></td>
+	</tr>
+	
+	<tr>
+		<td>Birth Date</td>
+		<td><input type=date id="dte"></td>
+		
+	</tr>
+	
+	<tr>
+		<td>Email Address</td>
+		<td><input type=text id="mail" name="mail"></td>
+	</tr>
+	
+	<tr>
+		<td>Gender</td>
+		<td>Male<input type=radio id="gen" name="gen" value="Male">
+		Female<input type=radio id="gen"name="gen" value="Female"></td>
+	</tr>
+	
+	<tr>
+		<td>Lucky number</td>
+		<td><input type=text id="lucNum"></td>
+	</tr>
+	
+	<tr>
+		<td>Favorite Foods</td>
+		<td><input type=checkbox name="favFood" value="pizza">Pizza<br>
+		<input type=checkbox name="favFood" value="Pasta">Pasta<br>
+		<input type=checkbox name="favFood" value="Chinese">Chinese
+		</td>
+	</tr>
+	<tr>
+		<td><input type=button value="send data" onclick="display()">
+		</td>
+	</tr>
+	</table>
+</form>
+You Entered:<br>
+Name:<span id="p1">
+</span><br>
+Birth Date:<span id="p2">
+</span><br>
+Email Address:<span id="p3">
+</span><br>
+Gender:<span id="p4">
+</span><br>
+Lucky Number:<span id="p5">
+</span><br>
+Favorite Foods<span id="p6">
+</span><br>
+<span id="p7"></span>
+
+</body>
+
+
+</html>

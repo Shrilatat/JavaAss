@@ -1,0 +1,55 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+	function display()
+	{
+		
+		
+		var name=document.getElementById("cust_name").value;
+		var billingDate =document.getElementById("billing_date").value;
+		var shippingDate=document.getElementById("shipping_date").value;
+		if(name.length<6)
+		{
+			alert("Customer name cannot be les than 6 characters");
+			document.getElementById("cust_name").focus();
+			return false;
+			
+		}
+		if(Date.parse(billingDate)>Date.parse(shippingDate)){
+			alert("Invalid dates");
+			document.getElementById("shipping_date").focus();
+			return false;
+		}
+		else
+		{
+			document.getElementById("p2").innerHTML=document.getElementById("cust_name").value;
+			document.getElementById("p1").innerHTML=document.getElementById("Order_id").value;
+			document.getElementById("p3").innerHTML=billingDate;
+			document.getElementById("p4").innerHTML=shippingDate;
+			document.getElementById("p5").innerHTML=document.getElementById("total").value;
+			
+		}		
+		
+	}
+</script>
+	Order ID:<input type=text id="Order_id"  name=="Order_id" required><br><br>
+	Customer name:<input type=text id="cust_name"  name="cust_name" required><br><br>
+	Enter Billing Date:<input type=text id="billing_date"  name="billing_date" required><br><br>
+	Enter Shipping Date:<input type=text id="shipping_date"  name="shipping_date" required><br><br>
+	Order Total:<input type=text id="total"  name="total" required><br><br>
+	<input type="submit" value="display" onclick="display()"><br><br>
+	Order id:<span id="p1">
+	</span><br>
+	Customer name:<span id="p2">
+	</span><br>
+	Enter Billing Date:<span id="p3">
+	</span><br>
+	Enter Shipping Date:<span id="p4">
+	</span><br>
+	Order Total:<span id="p5">
+	</span>
+</body>
+
+</html>

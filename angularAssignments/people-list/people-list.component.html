@@ -1,0 +1,19 @@
+<p>
+  people-list works!
+</p>
+
+<table border="1">
+  <tr>
+    <td>Name</td>
+    <td>Age</td>
+    <td>Gender</td>
+  </tr>
+  <tr *ngFor="let name of getAllPeople()">
+    <td>{{name.name}}</td>
+    <td>{{name.age}}</td>
+    <td>{{name.gender}}</td>
+  </tr>
+
+  
+</table>
+

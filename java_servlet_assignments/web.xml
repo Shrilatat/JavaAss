@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" 
+version="3.0">
+  <display-name>HSBCWebApp</display-name>
+  <servlet>
+  <servlet-name>abc</servlet-name>
+  <servlet-class>com.hsbc.trg.HelloWorldServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>abc</servlet-name>
+  <url-pattern>/helloworld</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>processname</servlet-name>
+  <servlet-class>com.hsbc.trg.ProcessNameServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>processname</servlet-name>
+  <url-pattern>/processname</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>addNumbers</servlet-name>
+  <servlet-class>com.hsbc.trg.AddNumbers</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>addNumbers</servlet-name>
+  <url-pattern>/addNumbers</url-pattern>
+  </servlet-mapping>
+ 
+  
+  <servlet>
+  <servlet-name>simpleinterest</servlet-name>
+  <servlet-class>com.hsbc.trg.SimpleInterestServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>simpleinterest</servlet-name>
+  <url-pattern>/simpleinterest</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>login</servlet-name>
+  <servlet-class>com.hsbc.trg.LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>login</servlet-name>
+  <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>formInput</servlet-name>
+  <servlet-class>com.hsbc.trg.InputFormDisplayServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>formInput</servlet-name>
+  <url-pattern>/formInput</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <welcome-file-list>
+    
+    <welcome-file>index.jsp</welcome-file>
+      </welcome-file-list>
+</web-app>

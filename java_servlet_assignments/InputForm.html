@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="formInput">
+<h1>User Input Form</h1>
+<div style="border:3px; border-style:solid; border-color:#000000; padding: 1em;"><b>Personal Particulars</b>
+<table>
+	<tr>
+		<td>Name</td>
+		<td><input type=text name=name></td>
+	</tr>
+		<td>Password</td>
+		<td><input type=password name=pass></td>
+	</tr>
+	<tr>
+	<td>Gender</td>
+		<td><input type=radio name=gen id=gen value="Male" >Male<input type=radio name=gen id=gen value="Female" >Female</td>
+	</tr><tr>
+	<tr>
+		<td>Age</td>
+		<td>
+		<input type=text name=age>
+		</td>
+	</tr>	
+</table>
+</div>
+<br>
+<br>
+<div style="border:3px; border-style:solid; border-color:#000000; padding: 1em;"> <b>Languages</b>
+<table>
+	<tr>
+	<td><input type= checkbox name=lang>Java <input type= checkbox name=lang>C/C++<input type= checkbox name=lang>C#</td>	
+	</tr>	
+</table>
+</div>
+<br>
+<br>
+<div style="border:3px; border-style:solid; border-color:#000000; padding: 1em;"><b>Instruction</b>
+<table>
+	<tr>
+	<td><textarea name="instruct" id="instruct" rows="10" cols="45" >Enter your instructions here....</textarea></td>
+	</tr>
+</table>
+</div>
+<br>
+<input type=submit value="SEND">
+</form>
+</body>
+</html>
