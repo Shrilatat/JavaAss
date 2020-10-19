@@ -1,0 +1,72 @@
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<form>
+			Name : <input type="textbox" id="name">
+			<br><br>
+			Birthdate : <select id="month">
+						<option>January</option>
+						<option>February</option>
+						<option>March</option>
+						</select>
+						<select id="date">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						</select>
+						<select id="year">
+						<option>1998</option>
+						<option>1999</option>
+						<option>2000</option>
+						</select>
+			<br><br>
+			Email Address : <input type="email" id="email"> 		(Use format name @company.com)
+			<br><br>
+			Gender : <input type="radio" name="gen" id="m">Male
+					 <br><span style="white-space:pre">              </span>		
+					 <input type="radio" name="gen" id="f">Female
+			<br><br>		 
+			Lucky Number : <input type="textbox" id="lucky"> 		(A number between 1 and 100)
+			<br><br>
+							  <span style="white-space:pre">                             </span><input type="checkbox" name="food"value="Pizza"> Pizza
+			<br>Favourite Foods : <input type="checkbox" name="food" value="Pasta"> Pasta
+							  <br><span style="white-space:pre">                             </span><input type="checkbox" name="food" value="Chinese"> Chinese
+			
+			<br><br><input type="button" value="Send Data "id="b1" onclick="myFunc()"> 
+			<p id="head"></p>
+			<p id="p1"></p>
+			<p id="p2"></p>
+			<p id="p3"></p>
+			<p id="p6"></p>
+			<p id="p4"></p>
+			<p id="p5"></p>
+			<script>
+				function myFunc(){
+					var male=document.getElementById("m");
+					var female=document.getElementById("f");
+					if(male.checked)
+							document.getElementById("p6").innerHTML="Gender : Male";
+					else
+							document.getElementById("p6").innerHTML="Gender : Female";
+							
+					var temp=document.getElementsByName('food');
+					var temp1="";
+					for(i=0;i<temp.length;i++){
+						if(temp[i].checked){
+							temp1=temp1+temp[i].value+" ";
+						}
+					}
+					document.getElementById("head").innerHTML="You Entered- ";
+					document.getElementById("p1").innerHTML="Name : "+ document.getElementById("name").value;
+					document.getElementById("p2").innerHTML="Birthdate : "+ document.getElementById("month").value+"/"+document.getElementById("date").value+"/"+document.getElementById("year").value;
+					document.getElementById("p3").innerHTML="Email Address : "+ document.getElementById("email").value;
+					document.getElementById("p5").innerHTML="Gender : "+ temp1;
+					document.getElementById("p4").innerHTML="Lucky Number : "+ document.getElementByName("lucky").value;
+					
+				}
+			</script>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<form>
+			Order ID : <input type="textbox" id="order">
+			<br><br>Cust Name : <input type="textbox" id="name">
+			<span id="e1" style="color:red"></span>
+			<br><br>Enter Billing Date : <input type="textbox" size="1" id="d">  <input type="textbox" size="1" id="m">  <input type="textbox" size="3" id="y">
+			<span id="e2" style="color:red"></span>
+			<br><br>Enter Shipping Date : <input type="textbox" size="1" id="sd">  <input type="textbox" size="1" id="sm">  <input type="textbox" size="3" id="sy">
+			<br><br>Order Total : <input type="textbox" id="total">
+			<br><br><input type="button" value="Display "id="b1" onclick="myFunc()">
+			<p id="p1"></p>
+			<p id="p2"></p>
+			<p id="p3"></p>
+			<p id="p4"></p>
+			<p id="p5"></p>
+				<script>
+					function myFunc(){
+						var name = document.getElementById("name").value;
+						var y = document.getElementById("y").value; 
+						var sy = document.getElementById("sy").value;
+						var m = document.getElementById("m").value; 
+						var sm = document.getElementById("sm").value; 
+						var d = document.getElementById("d").value; 
+						var sd = document.getElementById("sd").value; 
+											
+						if(name.length < 6)
+							document.getElementById("e1").innerHTML="Cust name cannot be less than 6 characters";
+						
+						if(y>sy){
+							document.getElementById("e2").innerHTML="Billing date cannot be greater than shipping date";
+						}
+						else if(y==sy){
+							if(m>sm){
+								document.getElementById("e2").innerHTML="Billing date cannot be greater than shipping date";
+								}
+								else if(m==sm){
+									if(d>sd){
+										document.getElementById("e2").innerHTML="Billing date cannot be greater than shipping date";
+									}
+								}
+						}
+					
+					document.getElementById("p1").innerHTML="Order ID : "+document.getElementById("order").value;
+					document.getElementById("p2").innerHTML="Cust Name : 	"+name;
+					document.getElementById("p3").innerHTML="Billing Date : "+y+"-"+m+"-"+d;
+					document.getElementById("p4").innerHTML="Shipping Date : "+sy+"-"+sm+"-"+sd;
+					document.getElementById("p5").innerHTML="Order Total : $ "+document.getElementById("total").value;
+					
+					}
+				</script>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>HSBCWebApp</display-name>
+	<servlet>
+		<servlet-name>abc</servlet-name>
+		<servlet-class>com.hsbc.Servlets.HelloWorldServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>abc</servlet-name>
+		<url-pattern>/helloworld</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>processname</servlet-name>
+		<servlet-class>com.hsbc.Servlets.processNameServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>processname</servlet-name>
+		<url-pattern>/processname</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>addnum</servlet-name>
+		<servlet-class>com.hsbc.Servlets.AddServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>addnum</servlet-name>
+		<url-pattern>/addnum</url-pattern>
+	</servlet-mapping>
+	
+	
+		<servlet>
+		<servlet-name>simpleinterest</servlet-name>
+		<servlet-class>com.hsbc.Servlets.SimpleInterestServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>simpleinterest</servlet-name>
+		<url-pattern>/SimpleInterest</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>com.hsbc.Servlets.LoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ordername</servlet-name>
+		<servlet-class>com.hsbc.Servlets.OrderDao</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ordername</servlet-name>
+		<url-pattern>/OrderDao</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

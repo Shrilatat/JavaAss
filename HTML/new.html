@@ -1,0 +1,23 @@
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<form>
+			Enter radius : <input type="textbox" id="rad">
+			<input type="button" value="Calculate "id="b1" onclick="area()">
+				<script>
+					function area(){
+						var radius = document.getElementById("rad").value;
+						var a = radius * radius * 3.14;
+						var c = 2 * 3.14 * radius;
+						console.log(a);
+						document.getElementById("p1").innerHTML=a;
+						document.getElementById("p2").innerHTML=c;
+					}
+				</script>
+			<br><br>Area = <span id="p1"></span>
+			<br><br>Circumference = <span id="p2"></span>
+		</form>
+	</body>
+</html>
