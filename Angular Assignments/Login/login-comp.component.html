@@ -1,0 +1,15 @@
+<form #Loginform="ngForm" (ngSubmit)="validate(Loginform)" >
+  <input name="id" placeholder="User id" ngModel><br><br>
+  <input name="password" type="password" placeholder="User Password" ngModel><br><br>
+  <input type="submit" value="Submit"><br>
+</form><br><br>
+
+<div *ngIf="success">
+  {{user|json}}
+   success
+</div>
+
+<div *ngIf="fail">
+  Failure! 
+  Try again!
+</div>
