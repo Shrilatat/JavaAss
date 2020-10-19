@@ -1,0 +1,10 @@
+INSERT INTO products (pname,descp,price,category) VALUES ('DELL','VERY FAST',88888,'laptop');
+INSERT INTO products (pname,descp,price,category) VALUES ('LENOVO','VERY SLOW',68888,'laptop');
+INSERT INTO products (pname,descp,price,category) VALUES ('APPLE','VERY FAST',50000,'mobile');
+INSERT INTO products (pname,descp,price,category) VALUES ('SAMSUNG','VERY FAST',8818,'mobile');
+INSERT INTO products (pname,descp,price,category) VALUES ('ONEPLUS','VERY FAST',50888,'tv');
+INSERT INTO products (pname,descp,price,category) VALUES ('ONIDA','VERY HD',9999,'tv');
+INSERT INTO products (pname,descp,price,category) VALUES ('IPAD','SUPER FAST',99990,'tablets');
+INSERT INTO products (pname,descp,price,category) VALUES ('LENOVO','VERY SMALL',5000,'tablets');
+INSERT INTO products (pname,descp,price,category) VALUES ('DELL','VERY FAST',88888,'gaming consoles');
+INSERT INTO products (pname,descp,price,category) VALUES ('DELL','VERY FAST',88888,'gaming consoles');
