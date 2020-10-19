@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<form >
+		Name: <input type="text" id="name"><br><br>
+		Date:<input type="Date" id="date"><br><br>
+		email address:<input type="email" id="mail"><br><br>
+		Gender : <input type="radio" id="male" name= "gender" value="male">
+		<label for="male">Male</label>
+		<input type="radio" id="female" name= "gender" value="female">
+		<label for="female">Female</label> <br><br>
+		Lucky number: <input type="text" name="luckyNumber" id="luckyNumber"><br><br>
+		Favourite Foods: <input type="checkbox" name="Food" value="Pizza" id="pizza">
+		<label for="pizza">Pizza</label>
+		<input type="checkbox" name="FavouriteFood" value="Pasta" id="pasta">
+		<label for="pasta">Pasta</label>
+		<input type="checkbox" name="FavouriteFood" value="Chinese" id="chinese">
+		<label for="chinese">Chinese</label>
+		<br><br>
+
+		<input type="button" name="submit" value="send" onclick="display()">
+
+             <p id="p1"></p>
+             <p id="p2"></p>
+             <p id="p3"></p>
+             <p id="p4"></p>
+             <p id="p5"></p>
+             <p id="p6"></p>
+             <p id="p7"></p>
+
+	</form>
+	<script type="text/javascript">
+		function display(){
+			var name = document.getElementById("name").value;
+			var mail = document.getElementById("mail").value;
+			var birth = document.getElementById('date').value;
+			var gender = document.getElementsByName('gender').value;
+
+			if (document.getElementById('female').checked) 
+        	var Gender = document.getElementById('female').value;
+			else
+        	var Gender = document.getElementById('male').value;
+
+			var luckyNo = document.getElementById('luckyNumber').value;
+			var Food = document.getElementsByName('Food').value;
+
+			function getNames() {
+        	 var checks=document.getElementsByName("Food");
+         	 var str='';
+          	 for(var i=0;i<checks.length;i++) {
+              		if(checks[i].checked==true)
+              		str+=checks[i].value+" ";
+          		}
+             return str;
+            }
+
+
+			document.getElementById("p1").innerHTML="You Entered";
+	        document.getElementById("p2").innerHTML="Name: "+name;
+	        document.getElementById("p3").innerHTML="Birth Date: "+birth;
+	        document.getElementById("p4").innerHTML="Email Address: "+mail;
+	        document.getElementById("p5").innerHTML="Gender: "+Gender;
+	        document.getElementById("p6").innerHTML="Lucky Number: "+luckyNo;
+	        document.getElementById("p7").innerHTML="Favorite foods: "+ getNames();
+		}
+	</script>
+
+</body>
+</html>

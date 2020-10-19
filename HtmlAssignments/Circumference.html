@@ -1,0 +1,27 @@
+<html> 
+	<head>
+	</head>
+	
+	<body >
+		
+		<script>
+		function myFunction(){
+		var rad=parseInt(window.document.getElementById("b1").value);
+		var circum=2*Math.PI*rad;
+		var area= Math.PI*rad*rad;
+		document.getElementById("s1").innerHTML=area;
+		document.getElementById("s2").innerHTML=circum;
+			
+		}
+		
+		</script>
+		<form>
+				Enter Radius :<input type="text" id="b1"><br><br>
+				<input type="button" value="Display" onclick="myFunction()"><br><br>
+				
+				<p id="p1">Area: <span id="s1"> </span></p>
+				<p id="p2">circum: <span id="s2"> </span></p>
+				
+		</form>
+	</body>
+</html>

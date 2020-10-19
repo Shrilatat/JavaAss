@@ -1,0 +1,20 @@
+
+OrderId:<input type="text" [(ngModel)]="orderId"><br><br>
+CustName:<input type="text" [(ngModel)]="custName"><br><br>
+Enter Billing Date:<input type="text" [(ngModel)]="billingDate"><br><br>
+Enter Shipping Date:<input type="text" [(ngModel)]="shipDate"><br><br>
+OrderTotal:<input type="text" [(ngModel)]="total">
+<br><br>
+<input type="button" value="display" (click)="onClick()">
+
+
+<div *ngIf="clicked">
+Order id is: {{orderId}}<br><br>
+CustName is: {{custName}}<br><br>
+BillingDate is: {{billingDate}}<br><br>
+ShipDate is: {{shipDate}}<br><br>
+OrderTotal is: {{total}}
+</div>
+
+
+
