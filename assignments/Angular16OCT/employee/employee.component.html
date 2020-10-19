@@ -1,0 +1,36 @@
+<h1>EMPLOYEE DATA</h1>
+<input type="button" value="SHOW TABLE" (click)="getTable()">
+
+<br><br>
+<input type="button" value="SHOW LIST" (click)="getList()">
+
+<br><br>
+<input type="button" value="CLEAR FROM" (click)="clearAll()">
+
+<div *ngIf="viewTable">
+  <table border="1">
+      <tr><th>empno</th><th>ename</th><th>sal</th><th>desig</th><th>bonus</th><th>total</th></tr>
+      <tr *ngFor="let e of getTable()">
+         <td>{{e.empNo}}</td>
+         <td>{{ e.eName }}</td>
+         <td>{{ e.Sal }}</td>
+         <td>{{ e.eDesig }}</td>
+         <td>{{ 0.1*e.eSal }}</td>
+         <td>{{ 1.1*e.eSal }}</td>
+      </tr>
+   </table>
+</div>
+
+
+<div *ngIf="viewList">
+  <li *ngFor="let e of getList() ">
+      <ul>
+        <li>{{ e.empNo }}</li>
+        <li>{{ e.eName }}</li>
+        <li>{{ e.eSal }}</li>
+        <li>{{ e.eDesig }}</li>
+        <li>{{ 0.1*e.eSal }}</li>
+        <li>{{ 1.1*e.eSal }}</li>
+      </ul>
+  </li>
+</div>
