@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title> Welcome </title>
+	</head>
+<body bgcolor="lightgrey">
+	<script>
+		function add(){
+			var a=Number(document.getElementById("t1").value);
+			var b=Number(document.getElementById("t2").value);
+			document.getElementById("p1").innerHTML = a + b;
+		}
+	</script>
+	<form method="get">
+		No1 : <input type="text" name="t1" id="t1"><br><br>
+		No2 : <input type="text" name="t2" id="t2"><br><br>
+		<input type="button" value="add" onclick="add()"><br><br>
+
+		The sum is <span id="p1"></span>
+		
+	</form>
+</body>
+</html>

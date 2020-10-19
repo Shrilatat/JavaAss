@@ -1,0 +1,22 @@
+<h2>output 1</h2>
+<p>Using json</p>
+<table border="1" style="border-collapse:collapsed">
+    <tr><th>name</th><th>age</th><th>gender</th></tr>
+    <tr *ngFor="people">
+       <td>{{ per.name }}</td>
+       <td>{{ per.age }}</td>
+       <td>{{ per.gender }}</td>
+    </tr>
+ </table>
+
+
+<h2>output 2</h2>
+<p>using separate module</p>
+<table border="1" style="border-collapse:collapsed">
+    <tr><th>name</th><th>age</th><th>gender</th></tr>
+    <tr *ngFor=" get_all_people">
+       <td>{{ per.name }}</td>
+       <td>{{ per.age }}</td>
+       <td>{{ per.gender }}</td>
+    </tr>
+ </table>
