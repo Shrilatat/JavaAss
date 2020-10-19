@@ -1,0 +1,13 @@
+<h1>Courses List(from spring boot service)</h1>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr *ngFor="let course of courses">
+    <td>{{course.id}}</td>
+    <td>{{course.name}}</td>
+    <td>{{course.desc}}</td>
+  </tr>
+</table>
