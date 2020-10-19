@@ -1,0 +1,21 @@
+<p>
+  order-mgmt works!
+</p>
+
+<h1>Third Problem Statement</h1>
+Order ID : <input [(ngModel)]="id" type="text" #oid/><br><br>
+  Cust Name : <input [(ngModel)]="cust_name" type="text" #cname/><br><br>
+  Enter Billing Date : <input [(ngModel)]="bill_date" type="date" #bdate/><br><br>
+  Enter Shipping Date : <input [(ngModel)]="ship_date" type="date" #sdate/><br><br>
+  Order Total : <input [(ngModel)]="total" type="text" #ototal /> <br><br>
+  <input type="submit" value="Display" (click)="Clicked()">
+<div *ngIf="isClicked">
+<h2>Order Details</h2>
+
+  Order ID : {{id}}<br>
+  Cust_Name  : {{cust_name}}<br>
+  Billing Date : {{bill_date}}<br>
+  Shipping Date : {{ship_date}}<br>
+  Total : {{total}}<br>
+
+</div>

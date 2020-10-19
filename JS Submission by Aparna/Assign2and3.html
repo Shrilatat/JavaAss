@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 2</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function display(){
+			var flag = 0;
+			if((document.getElementById("cname").value).length <6 ){
+				flag=1;
+				document.getElementById("name_msg").innerHTML = "Cust name can not be < 6";			}
+
+			var billdate = document.getElementById("billdate").value;
+			var shipdate = document.getElementById("shipdate").value;
+
+			if(billdate>shipdate){
+				flag=1;
+				document.getElementById("date_msg").innerHTML = "Billing date can not be greater than shipping date";
+			}
+
+			if(flag==0){
+
+				document.getElementById("content").innerHTML = "Order ID : " + document.getElementById("oid").value + "<br>Cust Name : " + document.getElementById("cname").value + "<br>Billing Date : " + document.getElementById("billdate").value + "<br>Shipping Date : "+ document.getElementById("shipdate").value + "<br>Order Total : " + document.getElementById("total").value; 
+
+			}
+
+
+		}
+
+	</script>
+	<form>
+		Order ID : <input type="text" name="oid" id="oid" required /><br><br>
+		Cust Name : <input type="text" name="cname" id="cname" required /> <span id="name_msg" style="color: red;"></span> <br><br>
+		Enter Billing Date : <input type="date" name="billdate" id="billdate" required /><span id="date_msg" style="color: red;"></span><br><br>
+		Enter Shipping Data : <input type="date" name="shipdate" id="shipdate" required /><br><br>
+		Order Total : <input type="text" name="total" id="total" required /><br><br>
+
+		<input type="button" value="Display" onclick="display()">
+
+
+		<p id="content"></p>
+
+	</form>
+
+</body>
+</html>

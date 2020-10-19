@@ -1,0 +1,37 @@
+
+<h1>Problem Statement 4</h1>
+
+<input type="button" value="Table Display" (click)="onlyTable()"/><br><br>
+<input type="button" value="List Display" (click)="onlyList()"/><br><br>
+<input type="button" value="Clear Form" (click)="Nothing()"/><br><br>
+
+<br><br>
+<div *ngIf="isTable">
+  <table border="1">
+
+    <tr>
+      <th>EmpNo</th>
+      <th>Emp Name</th>
+      <th>Emp Salary</th>
+      <th>Emp Designation</th>
+      <th>Bonus</th>
+    </tr>
+  
+    <tr *ngFor="let emp of emps">
+      <td>{{emp.empno}}</td>
+      <td>{{emp.ename}}</td>
+      <td>{{emp.esalary}}</td>
+   <td>{{emp.edesig}}</td>   
+   <td>{{emp.esalary/10}}</td>
+    </tr>
+  </table>
+</div>
+
+
+<div *ngIf="isList">
+
+    <ul>
+      <li *ngFor="let emp of emps">
+        {{emp.empno}}-->{{emp.ename}}-->{{emp.esalary}}-->{{emp.edesig}}-->{{emp.esalary/10}}</li>
+  </ul>
+</div>

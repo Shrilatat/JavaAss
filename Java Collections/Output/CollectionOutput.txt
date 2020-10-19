@@ -1,0 +1,70 @@
+ARRAYLIST OPERATIONS
+Enter Series name,fav character,rating :
+Game of Thrones
+The Hound
+Enter Series name,fav character,rating :
+Friends
+Pheobe
+Enter Series name,fav character,rating :
+The Bold Type
+Sutton
+
+Displaying content based on insertion order
+Series [series_name=Game of Thrones, character=The Hound]
+Series [series_name=Friends, character=Pheobe]
+Series [series_name=The Bold Type, character=Sutton]
+
+Ascending Sort by Character
+Series [series_name=Friends, character=Pheobe]
+Series [series_name=The Bold Type, character=Sutton]
+Series [series_name=Game of Thrones, character=The Hound]
+
+Descending Sort By Name
+Series [series_name=The Bold Type, character=Sutton]
+Series [series_name=Game of Thrones, character=The Hound]
+Series [series_name=Friends, character=Pheobe]
+
+Descending Sort By Character
+Series [series_name=Game of Thrones, character=The Hound]
+Series [series_name=The Bold Type, character=Sutton]
+Series [series_name=Friends, character=Pheobe]
+
+After removing 0th element in list :
+Series [series_name=The Bold Type, character=Sutton]
+Series [series_name=Friends, character=Pheobe]
+
+HASHSET OPERATIONS :
+Enter series name,rating :
+GOT
+9
+Enter series name,rating :
+Friends
+8
+Enter series name,rating :
+The Bold Type
+7
+Series [series_name=GOT, character=9]
+Series [series_name=Friends, character=8]
+Series [series_name=The Bold Type, character=7]
+
+After Conversion to TreeSet Elements are Sorted :
+Series [series_name=The Bold Type, character=7]
+Series [series_name=Friends, character=8]
+Series [series_name=GOT, character=9]
+
+HASHMAP OPERATIONS
+Enter Series name and ratings as key value pairs 
+GOT
+9
+Enter Series name and ratings as key value pairs 
+Friends
+8
+Enter Series name and ratings as key value pairs 
+The Bold Type
+7
+[Key,Value]:Friends  8
+[Key,Value]:GOT  9
+[Key,Value]:The Bold Type  7
+
+The value[rating] for GOT key is :
+9
