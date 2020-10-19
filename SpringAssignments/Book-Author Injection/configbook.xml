@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id = "book" class="com.trg.Book" >
+		<constructor-arg index="0" value="2"/>
+		<constructor-arg index="1" value="Python"/>
+		<constructor-arg index="2" value="No idea"/>
+		<constructor-arg index="3" value="123"/>
+		<constructor-arg index="4" value="NoIdea"/>
+		<constructor-arg index="5" value="1200.0"/>
+		<property name="author" ref="au"></property>
+		</bean>
+		
+<bean id = "au" class="com.trg.Author" >
+		<constructor-arg index="0" value="Shengdane"/>
+		<constructor-arg index="1" value="23"/>
+		<constructor-arg index="2" value="email@mail"/>
+		<constructor-arg index="3" value="12345"/>
+		</bean>
+		
+		
+</beans>

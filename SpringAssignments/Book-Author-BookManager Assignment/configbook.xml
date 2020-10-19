@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="author1" class="com.trg.Author" >
+	<property name="firstName" value="Yashwant" />
+	<property name="lastName" value="Kanetkar" />
+	<property name="address" value="Australia" />
+	<property name="age" value="43" />
+</bean>
+
+<bean id="author2" class="com.trg.Author" >
+	<property name="firstName" value="Steve" />
+	<property name="lastName" value="Smith" />
+	<property name="address" value="Australia" />
+	<property name="age" value="28" />
+</bean>
+
+<bean id="author3" class="com.trg.Author" >
+	<property name="firstName" value="Yashwant" />
+	<property name="lastName" value="Kanetkar" />
+	<property name="address" value="Australia" />
+	<property name="age" value="43" />
+</bean>
+
+<bean id="book1" class="com.trg.Book">
+	<property name="bookId" value="101" />
+	<property name="bookTitle" value="Effective Java" />
+	<property name="publication" value="Oreily" />
+	<property name="price" value="1000" />
+	<property name="author" ref="author1" />
+</bean>
+
+<bean id="book2" class="com.trg.Book">
+	<property name="bookId" value="102" />
+	<property name="bookTitle" value="Head First Java" />
+	<property name="publication" value="DBS" />
+	<property name="price" value="1000" />
+	<property name="author" ref="author2" />
+</bean>
+
+<bean id="book3" class="com.trg.Book">
+	<property name="bookId" value="103" />
+	<property name="bookTitle" value="Spring in Action" />
+	<property name="publication" value="Sybage" />
+	<property name="price" value="1000" />
+	<property name="author" ref="author3" />
+</bean>
+
+<bean id="bookManager" class="com.trg.BookManager">
+  <property name="books">
+  <list>
+  <ref bean="book1"/>
+  <ref bean="book2"/>
+  <ref bean="book3"/>
+  </list>
+  </property>
+  </bean>
+
+
+
+		
+</beans>
