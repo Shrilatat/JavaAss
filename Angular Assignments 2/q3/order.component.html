@@ -1,0 +1,12 @@
+Order ID: <input type="text" [(ngModel)]="id"><br>
+Customer Name: <input type="text" [(ngModel)]="custName"><br>
+Billing Date: <input type="text" [(ngModel)]="bDate"><br>
+Shipping Date: <input type="text" [(ngModel)]="sDate"><br>
+Total: <input type="text" [(ngModel)]="total"><br>
+<input type="button" (click)="setDisplayValues(id,custName,bDate,sDate,total)" value="Display"><br>
+
+Order ID: {{id}}<br>
+Customer Name: {{custName}}<br>
+Billing Date: {{bDate}}<br>
+Shipping Date: {{sDate}}<br>
+Total: {{total}}<br>

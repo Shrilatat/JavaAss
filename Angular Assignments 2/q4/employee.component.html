@@ -1,0 +1,19 @@
+<input type="submit" value="Display Table" (click)="displayTable()">
+<input type="submit" value="Display List" (click)="displayList()">
+<input type="submit" value="Clear" (click)="clearDisplay()">
+  
+<div [hidden]="!isShowList">
+  <ul><li *ngFor="let e of employees">{{e.empno}}--{{e.empname}}-->{{e.salary}}-->{{calcBonus(e.empno)}}-->{{calcTotal(e.empno)}}></li></ul>
+</div>
+<div [hidden]="!isShowTable">
+  <table>
+    <tr><th>ID</th><th>Name</th><th>Salary</th><th>Bonus</th><th>Total</th></tr>
+    <tr *ngFor="let e of employees">
+      <td>{{e.empno}}</td>
+      <td>{{e.empname}}</td>
+      <td>{{e.salary}}</td>
+      <td>{{calcBonus(e.empno)}}</td>
+      <td>{{calcTotal(e.empno)}}</td>
+    </tr>
+  </table>
+</div>

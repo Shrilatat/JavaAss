@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>HSBCWebApp</display-name>
+  
+  <servlet>
+  		<servlet-name>abc</servlet-name>
+  		<servlet-class>com.hsbc.servlets.HelloWorldServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  		<servlet-name>abc</servlet-name>
+  		<url-pattern>/helloWorld</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  		<servlet-name>ProcessName</servlet-name>
+  		<servlet-class>com.hsbc.servlets.ProcessNameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  		<servlet-name>ProcessName</servlet-name>
+  		<url-pattern>/processName</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  		<servlet-name>Addition</servlet-name>
+  		<servlet-class>com.hsbc.servlets.AdditonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  		<servlet-name>Addition</servlet-name>
+  		<url-pattern>/processAddition</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  		<servlet-name>ProcessSimpleInterest</servlet-name>
+  		<servlet-class>com.hsbc.servlets.ProcessSimpleInterestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  		<servlet-name>ProcessSimpleInterest</servlet-name>
+  		<url-pattern>/processSimpleInterest</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  		<servlet-name>ProcessLogin</servlet-name>
+  		<servlet-class>com.hsbc.servlets.ProcessLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  		<servlet-name>ProcessLogin</servlet-name>
+  		<url-pattern>/processLogin</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

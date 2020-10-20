@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function validate(){
+			var name= document.getElementById("name").value;
+			var bdate = new Date();
+			bdate=document.getElementById("bdate").value;
+			var email = document.getElementById("Email").value;
+			// var gender = document.getElementById("gender").value;
+			var lnum= document.getElementById("lnum").value
+			var checkbox = document.getElementById("ffood").value;
+
+			if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)==false){
+				document.getElementById("emailerror").innerHTML = "Email doesnt follow standard format";
+    			return (false);
+  			}
+
+  			if( document.getElementById("gender").value==null){
+  				document.getElementById("gendererror").innerHTML = "No gender selected";
+  				return false;
+  			}
+  			if (checkbox==null){
+  				document.getElementById("fooderror").innerHTML = "No food selected";
+  				return false;
+  			}
+
+
+
+		}
+		
+	</script>
+
+	<center>
+		<form>
+			Name: <input type="text" id="name"><br>
+			Birth Date: <input type="Date" id="bdate"><br>
+			Email: <input type="Email" id="Email"><br>
+			Gender: <input type="radio" id="male" name="Gender" value="Male"> Male<input type="radio" id="female" name="Gender" value="Female"> Female<br>
+			Lucky Number: <input type="number" id="lnum"><br>
+			Favorite Foods: <input type="checkbox" id="ffood"> Pizza<input type="checkbox" id="ffood"> Pasta<input type="checkbox" id="ffood"> Chinese<br>
+			<input type="button" value="Send Data" onclick="return validate()">
+
+		</form>
+
+			
+			<div id="emailerror"></div>
+			<br><div id="lnumerror"></div>
+			<br><div id="gendererror"></div>
+			<br><div id="fooderror"></div>
+
+			
+			<div id="named"></div><br>
+			<div id="bdated"></div><br>
+			<div id="emaild"></div><br>
+			<div id="genderd"></div><br>
+			<div id="lnumd"></div><br>
+			<div id="ffoodd"></div><br>
+
+
+	</center>
+
+</body>
+</html>

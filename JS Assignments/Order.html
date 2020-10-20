@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function validate(){
+				var orderid = document.getElementById("orderid").value
+				var name = document.getElementById("name").value;
+				var bdate = new Date();
+				bdate = document.getElementById('bdate').value;
+				var sdate =new Date();
+				sdate = document.getElementById('sdate').value;
+				var total = document.getElementById("total").value;
+
+				if (name.length<6){
+					document.getElementById("nameerror").innerHTML="   Name has to be more than 6 characters";
+					document.getElementById("name").focus();
+					return false;
+				}
+				else if(bdate>sdate){
+					document.getElementById("dateerror").innerHTML="    Billing date cant be ahead of shipping date";
+					document.getElementById("bdate").focus();
+					return false;
+				}
+				else if(total<=0){
+					document.getElementById("totalerror").innerHTML = "    Total cant be 0 or negative";
+					document.getElementById("total").focus();
+					return false;
+				}
+				else{
+					document.getElementById("orderidd").innerHTML = " Order ID: "+orderid;
+					document.getElementById("named").innerHTML = " Customer Name: "+name;
+					document.getElementById("bdated").innerHTML = " Billing Date:  "+bdate;
+					document.getElementById("sdated").innerHTML = " Shipping Date:  "+sdate;
+					document.getElementById("totald").innerHTML = " Order Total:   "+total;
+
+
+					return true;
+				}
+
+
+			}
+	</script>
+
+	<center>
+		<h2>Order Details</h2><br>
+		
+		<form>
+			<label for="orderid">Order ID</label>
+			<input type="text" name="orderid" id="orderid"><br><br>
+
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name"><br><br>
+
+
+			<label for="bdate">Billing Date</label>
+			<input type="Date" name="bdate" id="bdate"><br><br>
+
+			<label for="sdate">Shipping Date</label>
+			<input type="Date" name="sdate" id="sdate"><br><br>
+
+			<label for="total">Order Total</label>
+			<input type="number" name="total" id="total"><br><br>
+
+			<input type="button" value="Display Details" onclick="return validate()"><br>
+
+			<br><div id="nameerror"></div>
+			<div id="dateerror"></div>
+			<div id="totalerror"></div>
+
+			<div id="orderidd"></div><br>
+			<div id="named"></div><br>
+			<div id="bdated"></div><br>
+			<div id="sdated"></div><br>
+			<div id="totald"></div><br>
+		</form>
+		
+	</center>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- Assignment 8 -->
+<h2>People List</h2>
+<table border="1" style="border-collapse:collapsed">
+  <tr><th>Name</th><th>Age</th><th>Gender</th></tr>
+  <tr *ngFor="let p of people">
+    <td >{{p.name}}</td>
+    <td >{{p.age}}</td>
+    <td >{{p.gender}}</td>
+  </tr>
+</table>
+
+<!-- Assignment-9 -->
+<h2>Second People List</h2>
+<table border="1" style="border-collapse:collapsed">
+  <tr><th>Name</th><th>Age</th><th>Gender</th></tr>
+  <tr *ngFor="let p of displayAllPeople()">
+    <td >{{p.uname}}</td>
+    <td >{{p.age}}</td>
+    <td >{{p.gender}}</td>
+  </tr>
+</table>
