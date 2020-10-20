@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		function send()
+		{
+
+					document.getElementById("l").innerHTML = "You entered:" ;
+					//name
+
+					var nameent = document.getElementById("n").value;
+					document.getElementById("name").innerHTML = "Name :" + nameent ;
+
+
+          // Date of birth
+
+          var month = document.getElementById("mon").value;
+          document.getElementById("m").innerHTML = "Month :" + month ;
+
+
+           var day = document.getElementById("day").value;
+          document.getElementById("d").innerHTML = "Day :" + day ;
+
+          var year = document.getElementById("year").value;
+          document.getElementById("y").innerHTML = "Year :" + year ;
+
+					//email
+
+					var email1 = document.getElementById("mail").value;
+					document.getElementById("email").innerHTML = "Email :" + email1 ;
+
+					//gender
+
+
+					var gend = document.getElementsByName('gender'); 
+              
+            	for(i = 0; i < gend.length; i++) { 
+                if(gend[i].checked) 
+                document.getElementById("gender1").innerHTML
+                        = "Gender: "+gend[i].value; 
+           		 } 
+
+					//lucky number
+
+					var ln = document.getElementById("luck").value;
+					document.getElementById("num").innerHTML = "Lucky Number :" + ln ;
+
+
+					//food
+						var foods = document.getElementsByName('f'); 
+              
+            	for(i = 0; i < foods.length; i++) { 
+                if(foods[i].checked) 
+                document.getElementById("food").innerHTML
+                        = "Food: "+ foods[i].value; 
+           		 } 
+
+
+
+
+			
+
+
+
+		}
+
+
+	</script>
+	
+	<form>
+			Name: <input type="text" id="n" ><br>
+			Emaill address: <input type="text" id="mail" ><br>
+			Birth date : <select id="mon">
+    <option >Jan</option>
+    <option >Feb</option>
+    <option >Mar</option>
+    <option >Apr</option>
+    </select>
+
+    <select id="day">
+    <option >1</option>
+    <option >2</option>
+    <option >3</option>
+    <option >4</option>
+    </select>
+
+    <select id="year">
+    <option >2016</option>
+    <option >2017</option>
+    <option >2018</option>
+    <option >2019</option>
+    </select> <br> 
+
+
+
+  <input type="radio" name="gender" value="male">
+  <label>Male</label><br>
+  <input type="radio" name="gender" value="female">
+  <label>Female</label><br>
+
+
+  Lucky number : <input type="text" id="luck" ><br>
+
+Favourite Foods: 
+  <input type="checkbox" name="f">
+  <label> Pizza</label><br>
+<input type="checkbox" name="f">
+  <label> Pasta</label><br>
+<input type="checkbox" name="f">
+  <label> Chinese</label><br>
+
+<input type="button" value="Send Data" onclick="send();">
+
+
+
+	</form>
+
+	<p id="l"></p>
+	<p id="name"> </p>
+  <p id="m"></p>
+  <p id="d"></p>
+  <p id="y"></p>
+	<p id="email"> </p>
+	<p id="gender1"> </p>
+	<p id="num"> </p>
+	<p id="food"> </p>
+	
+
+
+</body>
+</html>

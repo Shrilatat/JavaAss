@@ -1,0 +1,12 @@
+<!--<h2>{{getName()}}'s ToDo List</h2>
+<table border="1" style="border-collapse:collapsed">
+    <tr><th>Sr no</th><th>Description</th></tr>
+    <tr *ngFor="let item of getToDoItems(); let i = index">
+       <td>{{ i + 1 }}</td>
+       <td>{{ item.action }}</td>
+    </tr>
+ </table> -->;
+<input type="text" [value]="getName()"><br>
+<input type="text" [value]="contact.email"><br>
+<input type="text" [value]="contact.phone"><br>
+<input type="text" [value]="getToDoItems()[0].action"><br>

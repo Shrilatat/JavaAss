@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="
+ http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ 
+ <bean id="hw" class="com.trg.HelloWorld"></bean>
+ 
+ <bean id="cc" class="com.trg.CurrencyConverter">
+ <!-- <property name = "exchRate" value="74.0" /> -->
+ <!-- <constructor-arg value="74.0"/> -->
+ <property name = "exchangeService" ref="exchSer" />
+ </bean>
+ 
+ <bean id="bb" class="com.trg.Book">
+ <!-- <property name="bookId" value="111" />
+ <property name="title" value="RRR" />
+ <property name="name" value="AAA" />
+ <property name="isbn" value="222" /> 
+  -->
+  <constructor-arg index="0" value="111"/>
+  <constructor-arg index="1" value="rrr"/>
+  <constructor-arg index="2" value="aaa"/>
+  <constructor-arg index="3" value="222"/>
+  
+ </bean>
+ 
+ 
+ <bean id="exchSer" class="com.trg.ExchangeService"></bean>
+ 
+ 
+ <bean id="bookc"  class="com.trg.Book2"><property name = "id" value="aaa" />
+ <property name = "title" value="ttt" />
+ <property name = "author" ref="authSer" /></bean>
+ <bean id="authSer" class="com.trg.Author">
+  <property name = "firstName" value="Rita" />
+   <property name = "lastName" value="Sen" />
+  <property name = "age" value="22" />
+   <property name = "email" value="b@jjsadh" />
+        <property name = "contact" value="776786" />
+        <property name = "address" value="India" />
+        
+ </bean>
+ 
+ <bean id="cb" class="com.trg.CurrencyBean">
+ <property name="currencies">
+ <list>
+ <value>Dollars</value>
+ <value>Euro</value>
+ <value>Pound</value>
+ <value>Yen</value>
+ </list>
+ </property>
+ </bean>
+ 
+ </beans>
+ 
+ 

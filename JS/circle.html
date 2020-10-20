@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+
+		function f1()
+		{
+
+			var r = parseInt(document.getElementById("t1").value);
+			var area = Math.PI*r*r;
+			var peri = 2*Math.PI*r;
+			document.getElementById("a").innerHTML = "Area  " + area;
+			document.getElementById("b").innerHTML =  "Circumference " + peri;
+
+
+		}
+	</script>
+
+	
+	<form>
+	
+	Enter radius : <input type="text" id="t1"><br><br>
+	<input type="button" value="display" onClick="f1()"><br><br>
+	<p id="a"></p><br><br>
+	<p id="b"></p>
+
+</form>
+
+
+	
+
+</body>
+</html>

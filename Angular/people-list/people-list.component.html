@@ -1,0 +1,27 @@
+
+<h1>People</h1> 
+    <table >  
+            <tr> 
+                <th>Name</th> 
+                <th>Age</th> 
+                <th>Gender</th> 
+            </tr> 
+        <tr *ngFor="let dtls of people"> 
+            <td> {{dtls.name}} </td> 
+            <td> {{dtls.age}} </td> 
+            <td> {{dtls.gender}} </td>    
+        </tr> 
+    </table> 
+<h2>List</h2>
+    <table >  
+            <tr> 
+                <th>Name</th> 
+                <th>Age</th> 
+                <th>Gender</th> 
+            </tr> 
+        <tr *ngFor="let dtls of newPeople"> 
+            <td> {{dtls.getName()}} </td> 
+            <td> {{dtls.getAge()}} </td> 
+            <td> {{dtls.getGender()}} </td>    
+        </tr> 
+    </table> 
