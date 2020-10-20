@@ -1,0 +1,17 @@
+<h3>Retrieve Customer with given customer id</h3>
+<h4>Enter the cutomer id</h4>
+<form #myForm="ngForm" (ngSubmit)="getCustomer(myForm)">
+Customer Id: <input type="number" name="custId" ngModel><br><br>
+<input type="submit" value="Search for the customer">
+</form>
+<br><br>
+<div *ngIf="customerAccount">
+    <h3>Customer details are as follows:</h3>
+    <ul>
+        <li>Customer Id: {{customerAccount.customer.custId}}</li>
+        <li>Customer Name: {{customerAccount.customer.custName|uppercase}}</li>
+        <li>Customer Address: {{customerAccount.customer.custAddress}}</li>
+        <li>Customer Account Id: {{customerAccount.account.accId}}</li>
+        <li>Customer Account Balance: {{customerAccount.account.bal}}</li>
+    </ul>
+</div>
