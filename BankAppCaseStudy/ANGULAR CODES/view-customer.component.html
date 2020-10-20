@@ -1,0 +1,19 @@
+<h2>
+  Customer Details
+</h2>
+<br>
+<form #customerForm="ngForm" (ngSubmit)="getCustomer(customerForm)">
+  Enter Customer Id to search: <input type="number" name="custId" ngModel><br>
+  <input type="submit" value="Search">
+</form>
+<br><br>
+<div *ngIf="customerDetails">
+  <h2>Customer Details:</h2><br>
+  <ul>
+    <li>Customer ID : {{customerDetails.customerId}}</li>
+    <li>Account ID : {{customerDetails.accountId}}</li>
+    <li>Customer Name: {{customerDetails.customerName}}</li>
+    <li>Customer Address: {{customerDetails.address}}</li>
+    <li>Customer Account Balance: {{customerDetails.balance}}</li>
+  </ul>  
+</div>

@@ -1,0 +1,19 @@
+<p>
+  Add Customer<br>
+  Please fill the form below
+</p><br>
+<form createCustomerForm="ngForm" (ngSubmit)="createCustomer(createCustomerForm)"> 
+Enter Customer ID: <input type="number" name="customerId" ngModel>
+Enter Customer Name: <input type="text" name="customerName" ngModel>
+Enter Customer Address: <input type="text" name="address" ngModel>
+<input type="submit" value="Add Customer">
+</form>
+<br><br>
+<div *ngIf="customer">
+  <h2>Customer Details</h2><br>
+  <ul>
+    <li>Customer ID: {{customer.customerId}}</li>
+    <li>Customer Name: {{customer.customerName}}</li>
+    <li>Customer Address: {{customer.address}}</li>
+  </ul>
+</div>
