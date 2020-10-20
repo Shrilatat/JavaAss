@@ -1,3 +1,5 @@
+DONE BY ME AND MAULI
+
 It contains 3 separate microservices : product-catalog, product-category, product-managenent
 
 product-management is the face of the project, user will only access this controller and this controller is going to internally call the other two and 
