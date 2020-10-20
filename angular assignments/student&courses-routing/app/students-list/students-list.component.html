@@ -1,0 +1,13 @@
+<h1>Student List(Hardcoded)</h1>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Number</th>
+  </tr>
+  <tr *ngFor="let student of students">
+    <td>{{student.id}}</td>
+    <td>{{student.sname}}</td>
+    <td>{{student.snumber}}</td>
+  </tr>
+</table>

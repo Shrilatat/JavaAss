@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		var add = ()=>{
+			var a = parseInt(document.getElementById("a").value)
+			var b = parseInt(document.getElementById("b").value)
+			document.getElementById("c").value = a+b;
+			document.getElementById("p1").innerHTML = a+b
+
+		}
+	</script>
+	<form>
+		Number 1: <input type="text" name="a" id="a" required="">
+		<br> <br>
+		Number 2: <input type="text" name="b" id="b" required="">
+		<br><br>
+		<input type="button" name="" value="+" onClick="add()">
+		<br><br>
+		Answer: <input type="text" name="c" id="c" readonly>
+		<br><br>
+		<p id="p1"></p>
+	</form>
+
+</body>
+</html>

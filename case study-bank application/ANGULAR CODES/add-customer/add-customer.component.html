@@ -1,0 +1,23 @@
+<h3>
+  Add Customer to the database
+</h3>
+<p>Fill the form</p>
+<form #myForm="ngForm" (ngSubmit)="addCustomer(myForm)">
+  <fieldset>
+    <legend>Add Customer</legend>
+    Customer Id: <input type="number" name="custId" ngModel><br><br>
+    Customer Name: <input type="text" name="custName" ngModel><br><br>
+    Customer Address: <input type="text" name="custAddress" ngModel><br><br>
+  </fieldset>
+  <br>
+    <input type="submit" value="Add Customer">
+</form>
+<br><br>
+<div *ngIf="customer">
+    <h3>Customer Details:</h3>
+    <ul>
+        <li>Customer Id: {{customer.custId}}</li>
+        <li>Customer Name: {{customer.custName|uppercase}}</li>
+        <li>Customer Address: {{customer.custAddress}}</li>
+    </ul>
+</div>

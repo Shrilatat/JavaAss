@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS categories;
+
+CREATE TABLE categories (category VARCHAR(200) PRIMARY KEY);

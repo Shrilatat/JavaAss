@@ -1,0 +1,39 @@
+<p>
+  emp-details works!
+</p>
+
+<h2>Click on any button:</h2>
+<input type="button" value="Display in a Table" (click)="tableDisplay($event)">
+<input type="button" value="Display in a list" (click)="listDisplay($event)">
+<input type="button" value="Clear screen" (click)="clearDisplay($event)">
+
+<div id="table1" style="visibility: hidden;">
+  <table border="1">
+    <tr>
+      <th>empNo</th>
+      <th>empName</th>
+      <th>salary</th>
+      <th>desg</th>
+      <th>bonus</th>
+      <th>total</th>
+    </tr>
+
+    <tr *ngFor="let employee of employees">
+      <td>{{employee.empno}}</td>
+      <td>{{employee.ename}}</td>
+      <td>{{employee.salary}}</td>
+      <td>{{employee.desg}}</td>
+      <td>{{employee.salary/10}}</td>
+      <td>{{employee.salary*1.1}}</td>
+    </tr>
+  </table>
+</div>
+
+<div id="list1" style="visibility: hidden;">
+  <br><br>number----name----salary----desg----bonus----total<br>
+  <ol>
+    
+    <li *ngFor="let employee of employees">{{employee.empno}}----{{employee.ename}}----{{employee.salary}}----{{employee.desg}}----{{employee.salary/10}}----{{employee.salary*1.1}}</li>
+  </ol>
+</div>
+
