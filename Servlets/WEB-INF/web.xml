@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns="http://java.sun.com/xml/ns/javaee" 
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+		http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+		
+  <display-name>WebAppHSBC</display-name>
+  
+  <servlet>
+  	<servlet-name>abc</servlet-name> <!--Go to that file-->
+  	<servlet-class>com.hsbc.HelloWorldServlet</servlet-class> <!--and create instance of  the class-->
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>abc</servlet-name>   <!--map a file named abc-->
+  	<url-pattern>/helloworld</url-pattern> <!--if you find specified pattern-->
+  </servlet-mapping>
+  
+  
+   <servlet>
+  	<servlet-name>addnum</servlet-name> <!--Go to that file-->
+  	<servlet-class>com.hsbc.ProcessNameServlet</servlet-class> <!--and create instance of  the class-->
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>addnum</servlet-name>   <!--map a file named ****-->
+  	<url-pattern>/addNum</url-pattern> <!--if you find specified pattern-->
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>simpleint</servlet-name> <!--Go to that file-->
+  	<servlet-class>com.hsbc.SimpleInterestServlet</servlet-class> <!--and create instance of  the class-->
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>simpleint</servlet-name>   <!--map a file named ****-->
+  	<url-pattern>/simpleInt</url-pattern> <!--if you find specified pattern-->
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>login</servlet-name> <!--Go to that file-->
+  	<servlet-class>com.hsbc.LoginServlet</servlet-class> <!--and create instance of  the class-->
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>login</servlet-name>   <!--map a file named ****-->
+  	<url-pattern>/loginAssg</url-pattern> <!--if you find specified pattern-->
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
