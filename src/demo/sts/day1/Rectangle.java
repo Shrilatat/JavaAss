@@ -57,7 +57,7 @@ public class Rectangle {
 	            len = input.nextFloat();
 	        } catch (InputMismatchException ime) {
 	            System.out.println("Input Mismatch! Can not be parsed as a float value. Try Again");
-	            input.next(); // Flush the buffer from all data
+	            input.next(); 
 	            len = -1.0f;
 	        }
 		}
@@ -68,7 +68,7 @@ public class Rectangle {
 	        	brth = input.nextFloat();
 	        } catch (InputMismatchException ime) {
 	            System.out.println("Input Mismatch! Can not be parsed as a float value. Try Again");
-	            input.next(); // Flush the buffer from all data
+	            input.next(); 
 	            brth = -1.0f;
 	        }
 		}
