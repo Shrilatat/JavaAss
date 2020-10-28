@@ -1,21 +1,30 @@
 
 public class Empl {
-	private int id, sal;
+	
+	private static int idRef;
+	private int id;
+	private int sal;
 	private String name;
 	
-	public Empl() {};
+	
+	public Empl() {
+		this.id = ++idRef;
+	};
 	
 	public Empl(String name, int sal) {
+		this.id = ++idRef;
 		this.name = name;
 		this.sal = sal;
 	}
 	
 	public Empl(String name) {
+		this.id = ++idRef;
 		this.name = name;
 	}
 	
-	public void details(int id) {
-		System.out.println("Empl [id=" + id + ", sal=" + sal + ", name=" + name + "]");
+	
+	public String toString() {
+		return "Empl [id=" + id + ", sal=" + sal + ", name=" + name + "]";
 	}
 
 	public static void main(String[] args) {
@@ -25,9 +34,11 @@ public class Empl {
 		
 		Empl[] employees = {e1, e2, e3};
 		
-		for(int i = 0; i< employees.length; i++) {
-			employees[i].details(i);
+		for(Empl e : employees) {
+			System.out.println(e);
 		}
+		
+		
 	}
 	
 }
