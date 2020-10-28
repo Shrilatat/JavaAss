@@ -31,6 +31,10 @@ public class IntArrayDemo {
 			sqArray[i] = intArray[i]^2;
 	}
 	
+	private int[] subArr() {
+		
+	}
+	
 	public static void main(String[] args) {
 		
 	}
