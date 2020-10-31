@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.wr/org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee.webapp_2_0.xsd" id="WebApp_ID" version="3.0">
+	<display-name>WebContent</display-name>
+
+	<servlet>
+		<servlet-name>hello</servlet-name>
+		<servlet-class>demo.sts.WebServlet.HelloWorldServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>tempConverter</servlet-name>
+		<servlet-class>demo.sts.WebServlet.TempConverter</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>loginDemo</servlet-name>
+		<servlet-class>demo.sts.WebServlet.loginServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>allServlets</servlet-name>
+		<servlet-class>demo.sts.WebServlet.showAllServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>simpleInterestCalc</servlet-name>
+		<servlet-class>demo.sts.WebServlet.InterestCalcServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>/helloWorld</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>tempConverter</servlet-name>
+		<url-pattern>/tempConverter</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>allServlets</servlet-name>
+		<url-pattern>/allServlets</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet-mapping>
+		<servlet-name>simpleInterestCalc</servlet-name>
+		<url-pattern>/simpleInterestCalc</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>loginDemo</servlet-name>
+		<url-pattern>/loginDemo</url-pattern>
+	</servlet-mapping>
+
+</web-app>
