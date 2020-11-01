@@ -1,32 +1,45 @@
+package com.jdbcassign2;
 
 public class Empl {
-	private static int id=0;
+	private int id;
 	private String name;
-	private int sal;
-	
-	public Empl(String name, int sal) {
+	private double sal;
+		
+	public Empl(int id, String name, double sal) {
+		super();
+		this.id = id;
 		this.name = name;
 		this.sal = sal;
 	}
-	
+
 	public Empl() {}
 	
-	public Empl(String name) {
-		this.name = name;
-	}
-	
-	public String toString() {
-		id++;
-		return "Empl [name=" + name + ", sal=" + sal + ", id=" + id +"]";
+	public int getId() {
+		return id;
 	}
 
-	public static void main(String[] args) {
-		Empl E1= new Empl("Employee1", 10000);
-		Empl E2= new Empl("Employee2", 100000);
-		Empl E3= new Empl();
-		System.out.println(E1);
-		System.out.println(E2);
-		System.out.println(E3);
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSal() {
+		return sal;
+	}
+
+	public void setSal(double sal) {
+		this.sal = sal;
+	}
+
+	public String toString() {
+		return "Empl [name=" + name + ", sal=" + sal + ", id=" + id +"]";
 	}
 	
 }

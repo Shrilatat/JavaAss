@@ -1,3 +1,4 @@
+package com.jdbcassign1;
 
 public class Book {
 	private int bookno;
