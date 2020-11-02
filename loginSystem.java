@@ -3,7 +3,6 @@ package JavaAss;
 import java.util.HashMap;
 import java.util.Scanner;
 
-
 public class loginSystem {
 
 	private static HashMap<String, String> dataHashMap = new HashMap<String, String>();
@@ -35,8 +34,8 @@ public class loginSystem {
 		loginSystem lSystem = new loginSystem();
 		Scanner scanner = new Scanner(System.in);
 		String username = scanner.next();
-		 String password = scanner.next();
-		
+		String password = scanner.next();
+
 		lSystem.Register(username, password);
 		lSystem.Login(username, password);
 
